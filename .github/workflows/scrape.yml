@@ -10,20 +10,16 @@ jobs:
   scrape-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout the private scraper repo (to get the script)
       - name: Checkout Scraper Repo
         uses: actions/checkout@v4
 
-      # 2. Checkout the public data repo (to write the file into)
-      #    This uses the DEPLOY_KEY to get write access.
       - name: Checkout Data Repo
         uses: actions/checkout@v4
         with:
           repository: Bas1874/Watch-Order-Seanime # <-- IMPORTANT: Change this
-          path: data-repo # Checkout into a 'data-repo' subfolder
+          path: data-repo
           ssh-key: ${{ secrets.DEPLOY_KEY }}
 
-      # 3. Setup Python environment
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -32,17 +28,20 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      # 4. Run the scraper and save the output to the data repo's folder
       - name: Run Scraper
+        # This 'env' block securely passes your secrets to the Python script
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
         run: python scrape_wiki.py ./data-repo/watch_order.json
 
-      # 5. Commit and push the changes to the public data repo
       - name: Commit and Push to Data Repo
         run: |
           cd data-repo
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          # The 'git diff --quiet' command exits with 1 if there are changes
           if ! git diff --quiet; then
             git add watch_order.json
             git commit -m "Automated: Updated watch order data"
