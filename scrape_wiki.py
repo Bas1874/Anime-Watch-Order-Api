@@ -1,39 +1,70 @@
-# scrape_wiki.py
+# scrape_wiki.py (Final Authentication Version)
 import requests
 import json
 import sys
+import os
 
-REDDIT_WIKI_URL = "https://www.reddit.com/r/anime/wiki/watch_order.json"
-# The output path will be provided as a command-line argument
-OUTPUT_FILEPATH = sys.argv[1]
+# --- Step 1: Get Credentials from Environment Variables ---
+# GitHub Actions will populate these from the secrets we just set
+CLIENT_ID = os.environ.get("REDDIT_CLIENT_ID")
+CLIENT_SECRET = os.environ.get("REDDIT_CLIENT_SECRET")
+USERNAME = os.environ.get("REDDIT_USERNAME")
+PASSWORD = os.environ.get("REDDIT_PASSWORD")
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-}
+# Check if all secrets are available
+if not all([CLIENT_ID, CLIENT_SECRET, USERNAME, PASSWORD]):
+    print("Error: Missing one or more Reddit credentials in environment variables.")
+    sys.exit(1)
 
-def scrape_and_save():
-    print(f"Fetching data from {REDDIT_WIKI_URL}...")
-    try:
-        response = requests.get(REDDIT_WIKI_URL, headers=HEADERS)
-        response.raise_for_status()
-        data = response.json()
-        html_content = data.get("data", {}).get("content_html", "")
+# --- Step 2: Authenticate and Get Access Token ---
+try:
+    print("Authenticating with Reddit API...")
+    auth = requests.auth.HTTPBasicAuth(CLIENT_ID, CLIENT_SECRET)
+    data = {
+        'grant_type': 'password',
+        'username': USERNAME,
+        'password': PASSWORD,
+    }
+    headers = {'User-Agent': 'SeanimeScraper/0.1 by ' + USERNAME}
+    
+    res = requests.post('https://www.reddit.com/api/v1/access_token',
+                        auth=auth, data=data, headers=headers)
+    res.raise_for_status()
+    
+    access_token = res.json()['access_token']
+    print("Successfully obtained API access token.")
+    
+except Exception as e:
+    print(f"Error during authentication: {e}")
+    sys.exit(1)
 
-        if not html_content:
-            print("Error: Could not find 'content_html'.")
-            return
+# --- Step 3: Fetch Wiki Data Using the Access Token ---
+try:
+    # Use the oauth.reddit.com endpoint for authenticated requests
+    wiki_url = "https://oauth.reddit.com/r/anime/wiki/watch_order"
+    # Add the access token to the headers
+    headers['Authorization'] = f'bearer {access_token}'
+    
+    print(f"Fetching data from {wiki_url}...")
+    response = requests.get(wiki_url, headers=headers)
+    response.raise_for_status()
+    
+    data = response.json()
+    html_content = data.get("data", {}).get("content_html", "")
 
-        output_data = {"html": html_content}
-
-        with open(OUTPUT_FILEPATH, 'w', encoding='utf-8') as f:
-            json.dump(output_data, f, ensure_ascii=False, indent=4)
-        
-        print(f"Successfully saved wiki data to {OUTPUT_FILEPATH}")
-
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        # Exit with a non-zero status code to fail the GitHub Action if something goes wrong
+    if not html_content:
+        print("Error: Could not find 'content_html' in the response.")
         sys.exit(1)
 
-if __name__ == "__main__":
-    scrape_and_save()
+    # --- Step 4: Save the Data ---
+    output_filepath = sys.argv[1]
+    output_data = {"html": html_content}
+
+    with open(output_filepath, 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, ensure_ascii=False, indent=4)
+    
+    print(f"Successfully saved wiki data to {output_filepath}")
+
+except Exception as e:
+    print(f"An error occurred during data fetching or saving: {e}")
+    sys.exit(1)
