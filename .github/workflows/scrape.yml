@@ -1,0 +1,40 @@
+# .github/workflows/scrape.yml
+name: Scrape Reddit Wiki Daily
+
+on:
+  schedule:
+    # This runs the job every day at 6:00 AM UTC
+    - cron: '0 6 * * *'
+  # This allows you to run the workflow manually from the Actions tab on GitHub
+  workflow_dispatch:
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out your repository code
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # Step 3: Install necessary Python packages
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      # Step 4: Run your scrape.py script
+      - name: Run scraper
+        run: python scrape_wiki.py
+
+      # Step 5: Commit and push the updated watch_order.json file
+      - name: Commit and push if content changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated: Updated watch order data"
+          file_pattern: watch_order.json
