@@ -1,5 +1,5 @@
-# .github/workflows/scrape.yml (Final, Robust Version)
-name: Scrape Reddit Wiki and Push to Data Repo
+# .github/workflows/scrape.yml (Corrected Permissions Version)
+name: Scrape Reddit Wiki and Generate API File
 
 on:
   schedule:
@@ -9,16 +9,15 @@ on:
 jobs:
   scrape-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Scraper Repo
-        uses: actions/checkout@v4
 
-      - name: Checkout Data Repo
+    # --- ADD THIS BLOCK ---
+    # This grants the GITHUB_TOKEN write permission for the job, allowing it to push changes.
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repo
         uses: actions/checkout@v4
-        with:
-          repository: Bas1874/Watch-Order-Seanime # Your public data repository
-          path: data-repo
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,7 +25,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests beautifulsoup4 lxml
 
       - name: Run Scraper
         env:
@@ -34,14 +33,10 @@ jobs:
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
           REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
-        run: python scrape_wiki.py ./data-repo/watch_order.json
+        run: python scrape_wiki.py ./data
 
-      # --- THIS IS THE CORRECTED STEP ---
-      - name: Commit and Push to Data Repo
+      - name: Commit and Push to Repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          # This tells the action to operate inside the 'data-repo' subfolder
-          repository: ./data-repo
-          commit_message: "Automated: Updated watch order data"
-          # This specifies exactly which file to commit
-          file_pattern: watch_order.json
+          commit_message: "Automated: Updated watch order data files"
+          file_pattern: data/*.json
