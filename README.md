@@ -163,7 +163,7 @@ If you wish to fork this repository and run the scraper yourself, follow these s
 ## Acknowledgements
 
 *   This project would not be possible without the incredible work of the moderators and community contributors to the **/r/anime wiki**. All watch order data is sourced directly from their page.
-*   Anime metadata is provided by the free and powerful **[AniList GraphQL API](https://anilist.gitbook.io/anilist-apiv2-docs)**.
+*   Anime metadata is provided by the free **[AniList GraphQL API](https://anilist.gitbook.io/anilist-apiv2-docs)**.
 
 ## License
 
