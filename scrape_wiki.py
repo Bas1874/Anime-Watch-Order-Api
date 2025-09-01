@@ -1,4 +1,4 @@
-# scrape_wiki.py (Final, Complex-Parsing Version)
+# scrape_wiki.py (Final, Complex-Parsing v2)
 import requests
 import json
 import sys
@@ -12,8 +12,6 @@ from datetime import datetime, timezone
 ANILIST_API_URL = 'https://graphql.anilist.co'
 
 # --- Reddit API Functions ---
-# These functions (get_reddit_access_token, fetch_wiki_data) remain the same.
-# I've included them here for completeness.
 def get_reddit_access_token():
     CLIENT_ID = os.environ.get("REDDIT_CLIENT_ID")
     CLIENT_SECRET = os.environ.get("REDDIT_CLIENT_SECRET")
@@ -24,7 +22,7 @@ def get_reddit_access_token():
     print("Authenticating with Reddit API...")
     auth = requests.auth.HTTPBasicAuth(CLIENT_ID, CLIENT_SECRET)
     data = {'grant_type': 'password', 'username': USERNAME, 'password': PASSWORD}
-    headers = {'User-Agent': f'SeanimeScraper/0.4 by {USERNAME}'}
+    headers = {'User-Agent': f'SeanimeScraper/0.5 by {USERNAME}'}
     res = requests.post('https://www.reddit.com/api/v1/access_token', auth=auth, data=data, headers=headers)
     res.raise_for_status()
     print("Successfully obtained Reddit API access token.")
@@ -33,7 +31,7 @@ def get_reddit_access_token():
 def fetch_wiki_data(access_token):
     wiki_url = "https://oauth.reddit.com/r/anime/wiki/watch_order"
     headers = {
-        'User-Agent': f'SeanimeScraper/0.4 by {os.environ.get("REDDIT_USERNAME")}',
+        'User-Agent': f'SeanimeScraper/0.5 by {os.environ.get("REDDIT_USERNAME")}',
         'Authorization': f'bearer {access_token}'
     }
     print(f"Fetching data from {wiki_url}...")
@@ -46,13 +44,12 @@ def fetch_wiki_data(access_token):
     return html_content
 
 # --- AniList API Function ---
-# This function (fetch_anilist_data_batch) also remains the same.
 def fetch_anilist_data_batch(mal_ids):
     if not mal_ids:
         return {}
     query = '''
     query ($ids: [Int], $type: MediaType) {
-      Page {
+      Page(perPage: 50) {
         media(idMal_in: $ids, type: $type) {
           id
           idMal
@@ -83,9 +80,8 @@ def fetch_anilist_data_batch(mal_ids):
         print(f"  - AniList batch query failed: {e}")
     return {}
 
-# --- NEW Parsing Logic ---
+# --- Parsing Logic ---
 def get_content_between_tags(start_tag, end_tag_names):
-    """Collects all sibling tags between a starting tag and the next tag in a given list."""
     content_tags = []
     for sibling in start_tag.find_next_siblings():
         if sibling.name in end_tag_names:
@@ -94,73 +90,59 @@ def get_content_between_tags(start_tag, end_tag_names):
     return content_tags
 
 def parse_steps_from_content(content_tags, anilist_map):
-    """Parses a list of tags to extract watch order steps."""
     steps = []
-    mal_ids_in_order = []
+    processed_mal_ids = set()
 
-    # First pass: collect all MAL IDs in order
-    for tag in content_tags:
-        if isinstance(tag, Tag): # Ensure it's a tag before searching
-            for a_tag in tag.find_all('a', href=re.compile(r'myanimelist\.net/anime/(\d+)')):
-                match = re.search(r'myanimelist\.net/anime/(\d+)', a_tag['href'])
-                if match:
-                    mal_id = int(match.group(1))
-                    if mal_id not in mal_ids_in_order:
-                        mal_ids_in_order.append(mal_id)
+    content_soup = BeautifulSoup("".join(map(str, content_tags)), 'lxml')
     
-    # Second pass: build the structured steps using the fetched AniList data
-    for mal_id in mal_ids_in_order:
-        media_data = anilist_map.get(mal_id)
-        if not media_data:
-            print(f"    - Warning: No AniList data found for MAL ID {mal_id}")
-            continue
+    # Process all list items and paragraphs that might contain links
+    for item in content_soup.find_all(['li', 'p']):
+        links = item.find_all('a', href=re.compile(r'myanimelist\.net/anime/(\d+)'))
+        for a_tag in links:
+            match = re.search(r'myanimelist\.net/anime/(\d+)', a_tag['href'])
+            if match:
+                mal_id = int(match.group(1))
+                if mal_id in processed_mal_ids:
+                    continue
 
-        # Find the original link to get context
-        original_link_tag = None
-        for tag in content_tags:
-            if isinstance(tag, Tag):
-                link = tag.find('a', href=re.compile(f'myanimelist.net/anime/{mal_id}'))
-                if link:
-                    original_link_tag = link
-                    break
-        
-        step_title = original_link_tag.get_text(strip=True) if original_link_tag else media_data.get('title', {}).get('romaji', 'Unknown')
-        
-        # Check for optional status in the parent context
-        is_optional = False
-        if original_link_tag and original_link_tag.find_parent():
-            parent_text = original_link_tag.find_parent().get_text()
-            if '(optional)' in parent_text.lower():
-                is_optional = True
+                media_data = anilist_map.get(mal_id)
+                if not media_data:
+                    continue
+                
+                processed_mal_ids.add(mal_id)
+                
+                # Use the whole list item's text as the title for context
+                step_title = item.get_text(strip=True)
+                is_optional = '(optional)' in step_title.lower()
 
-        # Clean up studios list
-        media_data['studios'] = [node['name'] for node in media_data.get('studios', {}).get('nodes', [])]
+                # Clean up studio data
+                clean_media_data = media_data.copy()
+                clean_media_data['studios'] = [node['name'] for node in clean_media_data.get('studios', {}).get('nodes', [])]
 
-        steps.append({
-            "step_title": step_title,
-            "is_optional": is_optional,
-            "media": media_data
-        })
+                steps.append({
+                    "step_title": step_title,
+                    "is_optional": is_optional,
+                    "media": clean_media_data
+                })
     return steps
 
 def parse_all_watch_orders(html_content):
-    """The main parsing function to handle both simple and complex entries."""
     soup = BeautifulSoup(html_content, 'lxml')
     api_entries = []
-    
-    all_mal_ids = set()
-    # First, scan the entire document to collect all MAL IDs for one big batch request
-    for a_tag in soup.find_all('a', href=re.compile(r'myanimelist\.net/anime/(\d+)')):
-        match = re.search(r'myanimelist\.net/anime/(\d+)', a_tag['href'])
-        if match:
-            all_mal_ids.add(int(match.group(1)))
 
+    # Batch fetch all MAL IDs at once for efficiency
+    all_mal_ids = {int(m.group(1)) for m in (re.search(r'myanimelist\.net/anime/(\d+)', a['href']) for a in soup.find_all('a', href=True)) if m}
     print(f"Found {len(all_mal_ids)} unique MAL IDs. Fetching from AniList...")
     anilist_data_map = fetch_anilist_data_batch(list(all_mal_ids))
     print("Finished fetching AniList data.")
 
-    # Now, parse each entry
-    all_h3_tags = soup.find_all('h3', id=lambda x: x and x.startswith('wiki_'))
+    # Find the "Watch Orders" H2 tag to start parsing from there, ignoring the FAQ
+    watch_orders_h2 = soup.find('h2', id='wiki_watch_orders')
+    if not watch_orders_h2:
+        raise ValueError("Could not find the 'Watch Orders' section header (h2) in the wiki.")
+
+    all_h3_tags = watch_orders_h2.find_next_siblings('h3')
+
     for h3 in all_h3_tags:
         header_text = h3.get_text(strip=True)
         parts = [p.strip() for p in header_text.split('/')]
@@ -172,49 +154,36 @@ def parse_all_watch_orders(html_content):
         entry_content_tags = get_content_between_tags(h3, ['h3', 'hr'])
         entry_soup = BeautifulSoup("".join(map(str, entry_content_tags)), 'lxml')
         
-        watch_orders = []
+        watch_orders_list = []
         
-        # Find sub-headings (h4 or strong tags that act as headers)
-        sub_headings = entry_soup.find_all(['h4', 'strong'])
-        
-        # Filter out 'strong' tags that are just for emphasis (like "Note:")
-        actual_sub_headings = []
-        for sh in sub_headings:
-            # A simple heuristic: if the tag is the first thing in its parent paragraph, it's likely a heading.
-            if sh.name == 'h4':
-                 actual_sub_headings.append(sh)
-            elif sh.name == 'strong' and sh.find_previous_sibling() is None and len(sh.get_text(strip=True)) < 50:
-                 actual_sub_headings.append(sh)
+        # Find sub-headings. A sub-heading is an H4 or a P tag containing only a STRONG tag.
+        sub_headings = entry_soup.find_all(['h4', lambda tag: tag.name == 'p' and tag.strong and len(tag.get_text(strip=True)) == len(tag.strong.get_text(strip=True))])
 
-
-        if actual_sub_headings and title not in ["FAQ"]:
-            print(f"  - Complex entry found with {len(actual_sub_headings)} sub-sections.")
-            for i, sub_head in enumerate(actual_sub_headings):
+        if sub_headings:
+            print(f"  - Complex entry found with {len(sub_headings)} sub-sections.")
+            for i, sub_head in enumerate(sub_headings):
                 sub_title = sub_head.get_text(strip=True).replace(':', '')
                 
-                # Determine the end boundary for this sub-section's content
-                end_tags = ['h4', 'strong']
+                # Get content between this subheading and the next one
+                sub_content_tags = get_content_between_tags(sub_head, ['h4', 'p'])
                 
-                sub_content_tags = get_content_between_tags(sub_head, end_tags)
-                
-                # The description is the text immediately following the sub-heading
                 description_p = sub_head.find_next('p')
-                description = description_p.get_text(strip=True) if description_p else None
+                description = description_p.get_text(strip=True) if description_p and description_p not in sub_headings else None
 
                 steps = parse_steps_from_content(sub_content_tags, anilist_data_map)
                 
                 if steps:
-                    watch_orders.append({
+                    watch_orders_list.append({
                         "name": sub_title,
                         "description": description,
                         "steps": steps
                     })
         else:
-            # Handle simple entries with no sub-headings
+            # Handle simple entries
             print("  - Simple entry found.")
             steps = parse_steps_from_content(entry_content_tags, anilist_data_map)
             if steps:
-                watch_orders.append({
+                watch_orders_list.append({
                     "name": "Main Story",
                     "description": None,
                     "steps": steps
@@ -224,15 +193,17 @@ def parse_all_watch_orders(html_content):
         entry_notes = None
         note_tag = entry_soup.find('strong', string=re.compile(r'Note:?', re.IGNORECASE))
         if note_tag:
-            note_content_tags = get_content_between_tags(note_tag, ['h3', 'h4', 'hr', 'strong'])
-            entry_notes = BeautifulSoup("".join(map(str, note_content_tags)), 'lxml').get_text(separator='\n', strip=True)
+            note_parent = note_tag.find_parent()
+            if note_parent:
+                 entry_notes = note_parent.get_text(strip=True)
 
-        if watch_orders:
+
+        if watch_orders_list:
             api_entries.append({
                 "title": title,
                 "alternative_titles": alternative_titles,
                 "entry_notes": entry_notes,
-                "watch_orders": watch_orders
+                "watch_orders": watch_orders_list
             })
 
     return api_entries
@@ -261,7 +232,7 @@ def main():
         
         final_output = {
             "metadata": {
-                "version": "2.0",
+                "version": "2.1",
                 "last_updated_utc": datetime.now(timezone.utc).isoformat(),
                 "source_url": "https://www.reddit.com/r/anime/wiki/watch_order"
             },
