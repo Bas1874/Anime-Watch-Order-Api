@@ -1,4 +1,4 @@
-# scrape_wiki.py (Final, Full-Text Preservation v4)
+# scrape_wiki.py (Final, Full-Text & HTML Preservation v5)
 import requests
 import json
 import sys
@@ -12,8 +12,7 @@ from datetime import datetime, timezone
 # --- Constants ---
 ANILIST_API_URL = 'https://graphql.anilist.co'
 
-# --- Reddit API Functions ---
-# These functions (get_reddit_access_token, fetch_wiki_data) remain the same.
+# --- Reddit API Functions (No Changes Here) ---
 def get_reddit_access_token():
     CLIENT_ID = os.environ.get("REDDIT_CLIENT_ID")
     CLIENT_SECRET = os.environ.get("REDDIT_CLIENT_SECRET")
@@ -24,7 +23,7 @@ def get_reddit_access_token():
     print("Authenticating with Reddit API...")
     auth = requests.auth.HTTPBasicAuth(CLIENT_ID, CLIENT_SECRET)
     data = {'grant_type': 'password', 'username': USERNAME, 'password': PASSWORD}
-    headers = {'User-Agent': f'SeanimeScraper/0.9 by {USERNAME}'}
+    headers = {'User-Agent': f'SeanimeScraper/1.0 by {USERNAME}'}
     res = requests.post('https://www.reddit.com/api/v1/access_token', auth=auth, data=data, headers=headers)
     res.raise_for_status()
     print("Successfully obtained Reddit API access token.")
@@ -33,7 +32,7 @@ def get_reddit_access_token():
 def fetch_wiki_data(access_token):
     wiki_url = "https://oauth.reddit.com/r/anime/wiki/watch_order"
     headers = {
-        'User-Agent': f'SeanimeScraper/0.9 by {os.environ.get("REDDIT_USERNAME")}',
+        'User-Agent': f'SeanimeScraper/1.0 by {os.environ.get("REDDIT_USERNAME")}',
         'Authorization': f'bearer {access_token}'
     }
     print(f"Fetching data from {wiki_url}...")
@@ -50,7 +49,7 @@ def fetch_wiki_data(access_token):
     print("Fetched and unescaped HTML content is valid.")
     return unescaped_html
 
-# --- AniList API Function ---
+# --- AniList API Function (No Changes Here) ---
 def fetch_anilist_data_batch(mal_ids):
     if not mal_ids: return {}
     mal_id_chunks = [mal_ids[i:i + 50] for i in range(0, len(mal_ids), 50)]
@@ -93,6 +92,7 @@ def parse_steps_from_html_slice(html_slice, anilist_map):
     steps = []
     processed_mal_ids_in_slice = set()
     links = html_slice.find_all('a', href=re.compile(r'myanimelist\.net/anime/(\d+)'))
+
     for a_tag in links:
         match = re.search(r'myanimelist\.net/anime/(\d+)', a_tag['href'])
         if not match: continue
@@ -133,49 +133,56 @@ def parse_all_watch_orders(html_content):
         entry_soup = BeautifulSoup("".join(map(str, entry_content_tags)), 'lxml')
         
         watch_orders_list = []
-        prologue_tags = []
         
         sub_headings = entry_soup.find_all(['h4', lambda tag: tag.name == 'p' and tag.strong and len(tag.get_text(strip=True)) == len(tag.strong.get_text(strip=True)) and len(tag.get_text(strip=True)) < 100 and 'note' not in tag.get_text(strip=True).lower()])
         
         first_heading = sub_headings[0] if sub_headings else None
         
-        # Get prologue text (before the first subheading)
+        prologue_tags = []
         for tag in entry_soup.contents:
-            if tag == first_heading:
-                break
-            if isinstance(tag, Tag):
-                prologue_tags.append(tag)
-        prologue_text = BeautifulSoup("".join(map(str, prologue_tags)), 'lxml').get_text(separator='\n', strip=True)
-
+            if tag == first_heading: break
+            if isinstance(tag, Tag): prologue_tags.append(tag)
+        
+        prologue_html_slice = BeautifulSoup("".join(map(str, prologue_tags)), 'lxml')
+        prologue_text = prologue_html_slice.get_text(separator='\n', strip=True)
+        prologue_html = str(prologue_html_slice)
+        
         if sub_headings:
             print(f"  - Complex entry found with {len(sub_headings)} sub-sections.")
             for i, sub_head in enumerate(sub_headings):
                 sub_title = sub_head.get_text(strip=True).replace(':', '')
                 next_sub_head = sub_headings[i+1] if i + 1 < len(sub_headings) else None
+                sub_content_tags = [str(tag) for tag in get_content_between_tags(sub_head, ['h4', 'p']) if tag != next_sub_head]
                 
-                sub_content_tags = []
-                for sibling in sub_head.find_next_siblings():
-                    if sibling == next_sub_head: break
-                    sub_content_tags.append(sibling)
-                
-                sub_slice_soup = BeautifulSoup("".join(map(str, sub_content_tags)), 'lxml')
-                description = sub_slice_soup.get_text(separator='\n', strip=True)
+                sub_slice_soup = BeautifulSoup("".join(sub_content_tags), 'lxml')
+                description_text = sub_slice_soup.get_text(separator='\n', strip=True)
+                description_html = str(sub_slice_soup)
                 steps = parse_steps_from_html_slice(sub_slice_soup, anilist_data_map)
                 
-                if steps or description:
-                    watch_orders_list.append({"name": sub_title, "description": description, "steps": steps})
+                if steps or description_text:
+                    watch_orders_list.append({
+                        "name": sub_title,
+                        "description": description_text or None,
+                        "description_html": description_html if '<body>' not in description_html else None,
+                        "steps": steps
+                    })
         else:
             print("  - Simple entry found.")
-            description = entry_soup.get_text(separator='\n', strip=True)
+            description_text = entry_soup.get_text(separator='\n', strip=True)
+            description_html = str(entry_soup)
             steps = parse_steps_from_html_slice(entry_soup, anilist_data_map)
             if steps:
-                watch_orders_list.append({"name": "Main Story", "description": description, "steps": steps})
+                watch_orders_list.append({
+                    "name": "Main Story",
+                    "description": description_text or None,
+                    "description_html": description_html if '<body>' not in description_html else None,
+                    "steps": steps
+                })
 
         entry_notes_list = []
         for note_tag in entry_soup.find_all(['strong', 'b'], string=re.compile(r'Note:?', re.IGNORECASE)):
-            note_parent = note_tag.find_parent()
-            if note_parent:
-                 entry_notes_list.append(note_parent.get_text(strip=True))
+             note_parent = note_tag.find_parent()
+             if note_parent: entry_notes_list.append(note_parent.get_text(strip=True))
         entry_notes = "\n".join(entry_notes_list) if entry_notes_list else None
 
         if watch_orders_list:
@@ -183,12 +190,14 @@ def parse_all_watch_orders(html_content):
                 "title": title,
                 "alternative_titles": alternative_titles,
                 "prologue": prologue_text or None,
+                "prologue_html": prologue_html if '<body>' not in prologue_html else None,
                 "entry_notes": entry_notes,
                 "watch_orders": watch_orders_list
             })
 
     return api_entries
 
+# --- Main Execution ---
 def main():
     if len(sys.argv) < 2:
         print("Usage: python scrape_wiki.py <output_directory>")
@@ -211,7 +220,7 @@ def main():
         
         final_output = {
             "metadata": {
-                "version": "2.6",
+                "version": "2.7",
                 "last_updated_utc": datetime.now(timezone.utc).isoformat(),
                 "source_url": "https://www.reddit.com/r/anime/wiki/watch_order"
             },
