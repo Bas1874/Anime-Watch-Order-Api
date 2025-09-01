@@ -1,7 +1,7 @@
 {
     "metadata": {
-        "version": "2.4",
-        "last_updated_utc": "2025-09-01T11:30:21.467183+00:00",
+        "version": "2.5",
+        "last_updated_utc": "2025-09-01T11:37:49.634931+00:00",
         "source_url": "https://www.reddit.com/r/anime/wiki/watch_order"
     },
     "data": [
@@ -161,14 +161,300 @@
             ]
         },
         {
+            "title": "Ajin",
+            "alternative_titles": [],
+            "entry_notes": "Note:",
+            "watch_orders": [
+                {
+                    "name": "Main Story",
+                    "description": null,
+                    "steps": [
+                        {
+                            "step_title": "Ajin [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 21341,
+                                "idMal": 31580,
+                                "title": {
+                                    "romaji": "Ajin",
+                                    "english": "AJIN: Demi-Human",
+                                    "native": "亜人",
+                                    "userPreferred": "Ajin"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2016,
+                                "averageScore": 71,
+                                "popularity": 111275,
+                                "genres": [
+                                    "Action",
+                                    "Horror",
+                                    "Mystery",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "POLYGON PICTURES"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21341-Pyc7SkMEuGsl.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21341-Pyc7SkMEuGsl.jpg",
+                                    "color": "#a17835"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ajin [OVA]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 21487,
+                                "idMal": 32015,
+                                "title": {
+                                    "romaji": "Ajin OVA",
+                                    "english": null,
+                                    "native": "亜人OVA",
+                                    "userPreferred": "Ajin OVA"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 3,
+                                "duration": 22,
+                                "season": "SPRING",
+                                "seasonYear": 2016,
+                                "averageScore": 68,
+                                "popularity": 9546,
+                                "genres": [
+                                    "Action",
+                                    "Horror",
+                                    "Mystery",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "POLYGON PICTURES"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21487-Va4pPFXsysWF.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21487-Va4pPFXsysWF.jpg",
+                                    "color": "#f1bb5d"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ajin 2nd Season [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 21799,
+                                "idMal": 33253,
+                                "title": {
+                                    "romaji": "Ajin 2",
+                                    "english": "AJIN: Demi-Human 2",
+                                    "native": "亜人 2",
+                                    "userPreferred": "Ajin 2"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "FALL",
+                                "seasonYear": 2016,
+                                "averageScore": 73,
+                                "popularity": 57523,
+                                "genres": [
+                                    "Action",
+                                    "Horror",
+                                    "Mystery",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "POLYGON PICTURES"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21799-0WB0vWJJ7mFX.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21799-0WB0vWJJ7mFX.jpg",
+                                    "color": "#e4c9a1"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Amagami SS",
             "alternative_titles": [],
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
-                    "description": "Amagami SS OVA and Amagami SS+ Plus Specials are some scenes that aren't shown in the series and may take place before, during, or after each girls' arcs.",
+                    "name": "Main Story",
+                    "description": null,
                     "steps": [
+                        {
+                            "step_title": "Amagami SS [TV]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 8676,
+                                "idMal": 8676,
+                                "title": {
+                                    "romaji": "Amagami SS",
+                                    "english": "Amagami SS",
+                                    "native": "アマガミSS",
+                                    "userPreferred": "Amagami SS"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 25,
+                                "duration": 24,
+                                "season": "SUMMER",
+                                "seasonYear": 2010,
+                                "averageScore": 69,
+                                "popularity": 78629,
+                                "genres": [
+                                    "Comedy",
+                                    "Romance",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "AIC"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx8676-rpRpE8lD4tbw.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx8676-rpRpE8lD4tbw.png",
+                                    "color": "#50aefe"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Amagami SS: Tachibana Miya-hen - Imouto [Special]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 9925,
+                                "idMal": 9925,
+                                "title": {
+                                    "romaji": "Amagami SS: Imouto",
+                                    "english": "Amagami SS: Sister",
+                                    "native": "アマガミSS イモウト",
+                                    "userPreferred": "Amagami SS: Imouto"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 24,
+                                "season": "SPRING",
+                                "seasonYear": 2011,
+                                "averageScore": 69,
+                                "popularity": 12950,
+                                "genres": [
+                                    "Comedy",
+                                    "Slice of Life"
+                                ],
+                                "studios": [],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/9925.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/9925.jpg",
+                                    "color": "#e4bba1"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Amagami SS [OVA]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 9117,
+                                "idMal": 9117,
+                                "title": {
+                                    "romaji": "Amagami SS OVA",
+                                    "english": null,
+                                    "native": "アマガミSS",
+                                    "userPreferred": "Amagami SS OVA"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 6,
+                                "duration": 5,
+                                "season": "SUMMER",
+                                "seasonYear": 2011,
+                                "averageScore": 69,
+                                "popularity": 12277,
+                                "genres": [
+                                    "Romance"
+                                ],
+                                "studios": [],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/9117.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/9117.jpg",
+                                    "color": "#ffd6ae"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Amagami SS+ Plus [TV]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 11235,
+                                "idMal": 11235,
+                                "title": {
+                                    "romaji": "Amagami SS+ plus",
+                                    "english": null,
+                                    "native": "アマガミSS+ plus",
+                                    "userPreferred": "Amagami SS+ plus"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2012,
+                                "averageScore": 71,
+                                "popularity": 34659,
+                                "genres": [
+                                    "Comedy",
+                                    "Romance",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "AIC"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11235-feAiunvtvMdq.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11235-feAiunvtvMdq.jpg",
+                                    "color": "#e4ae5d"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Amagami SS+ Plus: Extra Episode+ Plus [Special]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 12669,
+                                "idMal": 12669,
+                                "title": {
+                                    "romaji": "Amagami SS+ plus Specials",
+                                    "english": null,
+                                    "native": "アマガミSS+ plus",
+                                    "userPreferred": "Amagami SS+ plus Specials"
+                                },
+                                "format": "SPECIAL",
+                                "status": "FINISHED",
+                                "episodes": 6,
+                                "duration": 3,
+                                "season": "SPRING",
+                                "seasonYear": 2012,
+                                "averageScore": 69,
+                                "popularity": 9139,
+                                "genres": [
+                                    "Ecchi",
+                                    "Romance"
+                                ],
+                                "studios": [],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12669-YhoBBg5SRGzr.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12669-YhoBBg5SRGzr.jpg",
+                                    "color": "#f1d6bb"
+                                }
+                            }
+                        },
                         {
                             "step_title": "Amagami SS+ Plus: Picture Drama",
                             "is_optional": false,
@@ -312,6 +598,125 @@
                                     "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx100532-JsnQ0rsV9c5D.jpg",
                                     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx100532-JsnQ0rsV9c5D.jpg",
                                     "color": "#6b501a"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Angel Beats",
+            "alternative_titles": [],
+            "entry_notes": "Note:",
+            "watch_orders": [
+                {
+                    "name": "Main Story",
+                    "description": null,
+                    "steps": [
+                        {
+                            "step_title": "Angel Beats! Episodes 1-2 [TV]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 6547,
+                                "idMal": 6547,
+                                "title": {
+                                    "romaji": "Angel Beats!",
+                                    "english": "Angel Beats!",
+                                    "native": "Angel Beats!",
+                                    "userPreferred": "Angel Beats!"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "SPRING",
+                                "seasonYear": 2010,
+                                "averageScore": 77,
+                                "popularity": 396507,
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Drama",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "P.A.WORKS"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6547-SYexAn5aFyss.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6547-SYexAn5aFyss.png",
+                                    "color": "#5d78f1"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Angel Beats!: Hell's Kitchen [Special]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 9062,
+                                "idMal": 9062,
+                                "title": {
+                                    "romaji": "Angel Beats! Specials",
+                                    "english": "Angel Beats! Specials",
+                                    "native": "エンジェルビーツ 特別篇",
+                                    "userPreferred": "Angel Beats! Specials"
+                                },
+                                "format": "SPECIAL",
+                                "status": "FINISHED",
+                                "episodes": 2,
+                                "duration": 28,
+                                "season": "FALL",
+                                "seasonYear": 2010,
+                                "averageScore": 72,
+                                "popularity": 55744,
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Drama",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "P.A.WORKS"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9062-x3XnEGxK4eqh.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9062-x3XnEGxK4eqh.jpg",
+                                    "color": "#e45dbb"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Angel Beats!: Another Epilogue [Special]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 10067,
+                                "idMal": 10067,
+                                "title": {
+                                    "romaji": "Angel Beats!: Another Epilogue",
+                                    "english": null,
+                                    "native": "エンジェルビーツ! アナザーエピローグ",
+                                    "userPreferred": "Angel Beats!: Another Epilogue"
+                                },
+                                "format": "SPECIAL",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 3,
+                                "season": "FALL",
+                                "seasonYear": 2010,
+                                "averageScore": 70,
+                                "popularity": 47786,
+                                "genres": [
+                                    "Drama",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "P.A.WORKS"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx10067-83dhqo4TcbTs.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx10067-83dhqo4TcbTs.jpg",
+                                    "color": "#6b431a"
                                 }
                             }
                         }
@@ -537,6 +942,414 @@
                                     "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/97985-J9bPYFGSNLMG.jpg",
                                     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/97985-J9bPYFGSNLMG.jpg",
                                     "color": "#4393f1"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Ao no Exorcist",
+            "alternative_titles": [],
+            "entry_notes": "Note:",
+            "watch_orders": [
+                {
+                    "name": "Main Story",
+                    "description": null,
+                    "steps": [
+                        {
+                            "step_title": "Ao no Exorcist [TV]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 9919,
+                                "idMal": 9919,
+                                "title": {
+                                    "romaji": "Ao no Exorcist",
+                                    "english": "Blue Exorcist",
+                                    "native": "青の祓魔師",
+                                    "userPreferred": "Ao no Exorcist"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 25,
+                                "duration": 24,
+                                "season": "SPRING",
+                                "seasonYear": 2011,
+                                "averageScore": 72,
+                                "popularity": 414655,
+                                "genres": [
+                                    "Action",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "A-1 Pictures"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9919-nXS7JOZrWHfS.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9919-nXS7JOZrWHfS.jpg",
+                                    "color": "#aed6f1"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ao no Exorcist [Movie]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 11737,
+                                "idMal": 11737,
+                                "title": {
+                                    "romaji": "Ao no Exorcist Movie",
+                                    "english": "Blue Exorcist: The Movie",
+                                    "native": "青の祓魔師 -劇場版-",
+                                    "userPreferred": "Ao no Exorcist Movie"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 88,
+                                "season": "FALL",
+                                "seasonYear": 2012,
+                                "averageScore": 73,
+                                "popularity": 50444,
+                                "genres": [
+                                    "Action",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "A-1 Pictures"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11737-49ya7CBO5wEq.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11737-49ya7CBO5wEq.jpg",
+                                    "color": "#e4935d"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ao no Exorcist: Kuro no Iede [Special]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 11266,
+                                "idMal": 11266,
+                                "title": {
+                                    "romaji": "Ao no Exorcist: Kuro no Iede",
+                                    "english": "Blue Exorcist: Runaway Kuro",
+                                    "native": "青の祓魔師 クロの家出",
+                                    "userPreferred": "Ao no Exorcist: Kuro no Iede"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 24,
+                                "season": "FALL",
+                                "seasonYear": 2011,
+                                "averageScore": 69,
+                                "popularity": 26478,
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "A-1 Pictures"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11266-fSF6j9lTkcxs.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11266-fSF6j9lTkcxs.png",
+                                    "color": "#93d6e4"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ao no Exorcist: Ura Ex [Special]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 10647,
+                                "idMal": 10647,
+                                "title": {
+                                    "romaji": "Ao no Exorcist: Ura Eku",
+                                    "english": "Blue Exorcist Specials",
+                                    "native": "青の祓魔師 裏エク",
+                                    "userPreferred": "Ao no Exorcist: Ura Eku"
+                                },
+                                "format": "SPECIAL",
+                                "status": "FINISHED",
+                                "episodes": 10,
+                                "duration": 1,
+                                "season": "SPRING",
+                                "seasonYear": 2011,
+                                "averageScore": 66,
+                                "popularity": 18233,
+                                "genres": [
+                                    "Action",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10647-pLw3iZxk0SKu.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10647-pLw3iZxk0SKu.png",
+                                    "color": "#35ae50"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ao no Exorcist: Kyoto Fujouou-hen [TV]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 21861,
+                                "idMal": 33506,
+                                "title": {
+                                    "romaji": "Ao no Exorcist: Kyoto Fujouou-hen",
+                                    "english": "Blue Exorcist: Kyoto Saga",
+                                    "native": "青の祓魔師 京都不浄王篇",
+                                    "userPreferred": "Ao no Exorcist: Kyoto Fujouou-hen"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2017,
+                                "averageScore": 72,
+                                "popularity": 161734,
+                                "genres": [
+                                    "Action",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "A-1 Pictures"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21861-KDvJJQenJJlT.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21861-KDvJJQenJJlT.jpg",
+                                    "color": "#f1a143"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ao no Exorcist: Shimane Illuminati-hen",
+                            "is_optional": true,
+                            "media": {
+                                "id": 158931,
+                                "idMal": 53889,
+                                "title": {
+                                    "romaji": "Ao no Exorcist: Shimane Illuminati-hen",
+                                    "english": "Blue Exorcist -Shimane Illuminati Saga-",
+                                    "native": "青の祓魔師 島根啓明結社篇",
+                                    "userPreferred": "Ao no Exorcist: Shimane Illuminati-hen"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2024,
+                                "averageScore": 71,
+                                "popularity": 51316,
+                                "genres": [
+                                    "Action",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "Studio VOLN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx158931-QAQMtWKunvy3.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx158931-QAQMtWKunvy3.jpg",
+                                    "color": "#0dbbf1"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ao no Exorcist: Yuki no Hate-hen",
+                            "is_optional": true,
+                            "media": {
+                                "id": 176311,
+                                "idMal": 58516,
+                                "title": {
+                                    "romaji": "Ao no Exorcist: Yuki no Hate-hen",
+                                    "english": "Blue Exorcist -Beyond the Snow Saga-",
+                                    "native": "青の祓魔師 雪ノ果篇",
+                                    "userPreferred": "Ao no Exorcist: Yuki no Hate-hen"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 24,
+                                "season": "FALL",
+                                "seasonYear": 2024,
+                                "averageScore": 74,
+                                "popularity": 28853,
+                                "genres": [
+                                    "Action",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "Studio VOLN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176311-OZudERHrpJJ0.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176311-OZudERHrpJJ0.jpg",
+                                    "color": "#28aefe"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Ao no Exorcist: Yosuga-hen",
+                            "is_optional": true,
+                            "media": {
+                                "id": 185880,
+                                "idMal": 59226,
+                                "title": {
+                                    "romaji": "Ao no Exorcist: Yosuga-hen",
+                                    "english": "Blue Exorcist -The Blue Night Saga-",
+                                    "native": "青の祓魔師 終夜篇",
+                                    "userPreferred": "Ao no Exorcist: Yosuga-hen"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2025,
+                                "averageScore": 80,
+                                "popularity": 19145,
+                                "genres": [
+                                    "Action",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "Studio VOLN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx185880-efBIcDBzPiHP.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx185880-efBIcDBzPiHP.jpg",
+                                    "color": "#5da1f1"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Aoki Hagane no Arpeggio",
+            "alternative_titles": [],
+            "entry_notes": "Note:",
+            "watch_orders": [
+                {
+                    "name": "Main Story",
+                    "description": null,
+                    "steps": [
+                        {
+                            "step_title": "Aoki Hagane no Arpeggio: Ars Nova [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 18893,
+                                "idMal": 18893,
+                                "title": {
+                                    "romaji": "Aoki Hagane no Arpeggio: Ars Nova",
+                                    "english": "Arpeggio of Blue Steel",
+                                    "native": "蒼き鋼のアルペジオ",
+                                    "userPreferred": "Aoki Hagane no Arpeggio: Ars Nova"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 24,
+                                "season": "FALL",
+                                "seasonYear": 2013,
+                                "averageScore": 70,
+                                "popularity": 31093,
+                                "genres": [
+                                    "Action",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "SANZIGEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx18893-WqI68JXKBn2u.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx18893-WqI68JXKBn2u.jpg",
+                                    "color": "#e4d65d"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Aoki Hagane no Arpeggio: Ars Nova DC [Movie]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 20763,
+                                "idMal": 24919,
+                                "title": {
+                                    "romaji": "Aoki Hagane no Arpeggio: Ars Nova - DC",
+                                    "english": "Arpeggio of Blue Steel - DC",
+                                    "native": "劇場版 蒼き鋼のアルペジオ -アルス・ノヴァ-  DC",
+                                    "userPreferred": "Aoki Hagane no Arpeggio: Ars Nova - DC"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 105,
+                                "season": "WINTER",
+                                "seasonYear": 2015,
+                                "averageScore": 71,
+                                "popularity": 6751,
+                                "genres": [
+                                    "Action",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "SANZIGEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20763-DEDZexx3aQwx.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20763-DEDZexx3aQwx.png",
+                                    "color": "#351a86"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Aoki Hagane no Arpeggio: Ars Nova Cadenza [Movie]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 20764,
+                                "idMal": 24921,
+                                "title": {
+                                    "romaji": "Aoki Hagane no Arpeggio: Ars Nova - Cadenza",
+                                    "english": "Arpeggio of Blue Steel - Cadenza",
+                                    "native": "劇場版 蒼き鋼のアルペジオ -アルス・ノヴァ- Cadenza",
+                                    "userPreferred": "Aoki Hagane no Arpeggio: Ars Nova - Cadenza"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 105,
+                                "season": "FALL",
+                                "seasonYear": 2015,
+                                "averageScore": 75,
+                                "popularity": 7587,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "SANZIGEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20764-JSDg9zsnqPgs.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20764-JSDg9zsnqPgs.jpg",
+                                    "color": "#93aef1"
                                 }
                             }
                         }
@@ -1549,9 +2362,113 @@
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
+                    "name": "Main Story",
                     "description": null,
                     "steps": [
+                        {
+                            "step_title": "Baka to Test to Shoukanjuu [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 6347,
+                                "idMal": 6347,
+                                "title": {
+                                    "romaji": "Baka to Test to Shoukanjuu",
+                                    "english": "Baka and Test - Summon the Beasts",
+                                    "native": "バカとテストと召喚獣",
+                                    "userPreferred": "Baka to Test to Shoukanjuu"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2010,
+                                "averageScore": 71,
+                                "popularity": 107659,
+                                "genres": [
+                                    "Comedy",
+                                    "Romance"
+                                ],
+                                "studios": [
+                                    "SILVER LINK."
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6347-DCSHLkCY7UT3.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6347-DCSHLkCY7UT3.jpg",
+                                    "color": "#5d78e4"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Baka to Test to Shoukanjuu: Matsuri [OVA]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 9471,
+                                "idMal": 9471,
+                                "title": {
+                                    "romaji": "Baka to Test to Shoukanjuu: Matsuri",
+                                    "english": "Baka and Test - Summon the Beasts: Matsuri",
+                                    "native": "バカとテストと召喚獣 ～祭～",
+                                    "userPreferred": "Baka to Test to Shoukanjuu: Matsuri"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 2,
+                                "duration": 29,
+                                "season": "WINTER",
+                                "seasonYear": 2011,
+                                "averageScore": 72,
+                                "popularity": 26083,
+                                "genres": [
+                                    "Comedy",
+                                    "Romance",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "SILVER LINK."
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b9471-9OD9AGXNbdmq.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b9471-9OD9AGXNbdmq.jpg",
+                                    "color": "#e4ffbb"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Baka to Test to Shoukanjuu Ni! [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 8516,
+                                "idMal": 8516,
+                                "title": {
+                                    "romaji": "Baka to Test to Shoukanjuu Ni!",
+                                    "english": "Baka and Test - Summon the Beasts 2",
+                                    "native": "バカとテストと召喚獣 にっ！",
+                                    "userPreferred": "Baka to Test to Shoukanjuu Ni!"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "SUMMER",
+                                "seasonYear": 2011,
+                                "averageScore": 74,
+                                "popularity": 60524,
+                                "genres": [
+                                    "Comedy",
+                                    "Romance",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "SILVER LINK."
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx8516-uAw5qWkceccn.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx8516-uAw5qWkceccn.jpg",
+                                    "color": "#f1ff93"
+                                }
+                            }
+                        },
                         {
                             "step_title": "Baka to Test to Shoukanjuu [Special]",
                             "is_optional": false,
@@ -1839,9 +2756,117 @@
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
+                    "name": "Main Story",
                     "description": null,
                     "steps": [
+                        {
+                            "step_title": "BanG Dream! [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 87435,
+                                "idMal": 33573,
+                                "title": {
+                                    "romaji": "BanG Dream!",
+                                    "english": "BanG Dream!",
+                                    "native": "BanG Dream!（バンドリ！）",
+                                    "userPreferred": "BanG Dream!"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2017,
+                                "averageScore": 68,
+                                "popularity": 35642,
+                                "genres": [
+                                    "Comedy",
+                                    "Drama",
+                                    "Music",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "Xebec",
+                                    "Issen"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx87435-yHlVTP1HFiXH.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx87435-yHlVTP1HFiXH.png",
+                                    "color": "#f1e450"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "BanG Dream! 2nd Season [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 101633,
+                                "idMal": 37869,
+                                "title": {
+                                    "romaji": "BanG Dream! 2nd Season",
+                                    "english": "BanG Dream! 2nd Season",
+                                    "native": "BanG Dream! 2nd Season",
+                                    "userPreferred": "BanG Dream! 2nd Season"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 23,
+                                "season": "WINTER",
+                                "seasonYear": 2019,
+                                "averageScore": 74,
+                                "popularity": 18482,
+                                "genres": [
+                                    "Comedy",
+                                    "Drama",
+                                    "Music",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "SANZIGEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx101633-kRp4u7VmRb5h.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx101633-kRp4u7VmRb5h.jpg",
+                                    "color": "#3593e4"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "BanG Dream! 3rd Season [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 101634,
+                                "idMal": 37870,
+                                "title": {
+                                    "romaji": "BanG Dream! 3rd Season",
+                                    "english": "BanG Dream! 3rd Season",
+                                    "native": "BanG Dream! 3rd Season",
+                                    "userPreferred": "BanG Dream! 3rd Season"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2020,
+                                "averageScore": 78,
+                                "popularity": 14737,
+                                "genres": [
+                                    "Comedy",
+                                    "Music",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "SANZIGEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101634-4PSQAU2bw7s3.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101634-4PSQAU2bw7s3.png",
+                                    "color": "#d61a1a"
+                                }
+                            }
+                        },
                         {
                             "step_title": "BanG Dream!: Asonjatta! [Special]",
                             "is_optional": false,
@@ -2672,9 +3697,114 @@
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
+                    "name": "Main Story",
                     "description": null,
                     "steps": [
+                        {
+                            "step_title": "Birdy the Mighty: Decode [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 3974,
+                                "idMal": 3974,
+                                "title": {
+                                    "romaji": "Tetsuwan Birdy DECODE",
+                                    "english": "Birdy the Mighty: Decode",
+                                    "native": "鉄腕バーディー DECODE",
+                                    "userPreferred": "Tetsuwan Birdy DECODE"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 24,
+                                "season": "SUMMER",
+                                "seasonYear": 2008,
+                                "averageScore": 73,
+                                "popularity": 23176,
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "A-1 Pictures"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3974-Gb9WK53nSsPz.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3974-Gb9WK53nSsPz.png",
+                                    "color": "#e49350"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Birdy the Mighty: Decode [OVA]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 6380,
+                                "idMal": 6380,
+                                "title": {
+                                    "romaji": "Tetsuwan Birdy DECODE: THE CIPHER",
+                                    "english": "Birdy the Mighty Decode: The Cipher",
+                                    "native": "鉄腕バーディー DECODE -THE CIPHER-",
+                                    "userPreferred": "Tetsuwan Birdy DECODE: THE CIPHER"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 27,
+                                "season": "SUMMER",
+                                "seasonYear": 2009,
+                                "averageScore": 70,
+                                "popularity": 5803,
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "A-1 Pictures"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6380-jSQ4Kg2jfEQk.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6380-jSQ4Kg2jfEQk.jpg",
+                                    "color": "#e4a128"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Birdy the Mighty: Decode 02 [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 5074,
+                                "idMal": 5074,
+                                "title": {
+                                    "romaji": "Tetsuwan Birdy DECODE:02",
+                                    "english": "Birdy the Mighty: Decode 02",
+                                    "native": "鉄腕バーディー DECODE:02",
+                                    "userPreferred": "Tetsuwan Birdy DECODE:02"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 23,
+                                "season": "WINTER",
+                                "seasonYear": 2009,
+                                "averageScore": 78,
+                                "popularity": 11547,
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "A-1 Pictures"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5074-2pMtem2bC5K9.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5074-2pMtem2bC5K9.png",
+                                    "color": "#fe3528"
+                                }
+                            }
+                        },
                         {
                             "step_title": "Birdy the Mighty [TV]",
                             "is_optional": false,
@@ -2714,14 +3844,334 @@
             ]
         },
         {
+            "title": "Black Jack",
+            "alternative_titles": [],
+            "entry_notes": "Note:",
+            "watch_orders": [
+                {
+                    "name": "Main Story",
+                    "description": null,
+                    "steps": [
+                        {
+                            "step_title": "Black Jack [TV]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 2213,
+                                "idMal": 2213,
+                                "title": {
+                                    "romaji": "Black Jack (TV)",
+                                    "english": null,
+                                    "native": "ブラックジャック",
+                                    "userPreferred": "Black Jack (TV)"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 61,
+                                "duration": 25,
+                                "season": "FALL",
+                                "seasonYear": 2004,
+                                "averageScore": 73,
+                                "popularity": 7440,
+                                "genres": [
+                                    "Drama"
+                                ],
+                                "studios": [
+                                    "Tezuka Productions"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2213-wemXPc8z0r6a.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2213-wemXPc8z0r6a.jpg",
+                                    "color": "#e47850"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Black Jack (TV): Hizouban [Special]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 4071,
+                                "idMal": 4071,
+                                "title": {
+                                    "romaji": "Black Jack TV: Lost Episodes",
+                                    "english": null,
+                                    "native": null,
+                                    "userPreferred": "Black Jack TV: Lost Episodes"
+                                },
+                                "format": "SPECIAL",
+                                "status": "FINISHED",
+                                "episodes": 2,
+                                "duration": 25,
+                                "season": "SUMMER",
+                                "seasonYear": 2006,
+                                "averageScore": 62,
+                                "popularity": 880,
+                                "genres": [
+                                    "Adventure"
+                                ],
+                                "studios": [],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4071.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4071.jpg",
+                                    "color": "#d6a178"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Black Jack 21 [TV]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 2214,
+                                "idMal": 2214,
+                                "title": {
+                                    "romaji": "Black Jack 21",
+                                    "english": null,
+                                    "native": "ブラック・ジャック21",
+                                    "userPreferred": "Black Jack 21"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 17,
+                                "duration": 24,
+                                "season": "SPRING",
+                                "seasonYear": 2006,
+                                "averageScore": 73,
+                                "popularity": 2915,
+                                "genres": [
+                                    "Action",
+                                    "Drama"
+                                ],
+                                "studios": [
+                                    "Tezuka Productions"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx2214-b3Y4OOWHHW0i.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx2214-b3Y4OOWHHW0i.jpg",
+                                    "color": "#5dc9f1"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Black Jack: Futari no Kuroi Isha [Movie]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 1983,
+                                "idMal": 1983,
+                                "title": {
+                                    "romaji": "Black Jack: Futari no Kuroi Isha",
+                                    "english": null,
+                                    "native": "ブラック・ジャック ふたり黒い医者",
+                                    "userPreferred": "Black Jack: Futari no Kuroi Isha"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 97,
+                                "season": "FALL",
+                                "seasonYear": 2005,
+                                "averageScore": 68,
+                                "popularity": 1348,
+                                "genres": [
+                                    "Drama"
+                                ],
+                                "studios": [],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1983.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1983.jpg",
+                                    "color": "#d6351a"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Black Jack the Movie",
+                            "is_optional": true,
+                            "media": {
+                                "id": 1521,
+                                "idMal": 1521,
+                                "title": {
+                                    "romaji": "Black Jack Movie",
+                                    "english": "Black Jack: The Movie",
+                                    "native": "ブラック・ジャック 劇場版",
+                                    "userPreferred": "Black Jack Movie"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 93,
+                                "season": "FALL",
+                                "seasonYear": 1996,
+                                "averageScore": 72,
+                                "popularity": 3740,
+                                "genres": [
+                                    "Drama",
+                                    "Mystery",
+                                    "Thriller"
+                                ],
+                                "studios": [
+                                    "Tezuka Productions"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1521-maDvpcEJAbQi.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1521-maDvpcEJAbQi.jpg",
+                                    "color": "#e4a150"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Black Jack [OVA]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 1520,
+                                "idMal": 1520,
+                                "title": {
+                                    "romaji": "Black Jack",
+                                    "english": "Black Jack",
+                                    "native": "ブラック・ジャック",
+                                    "userPreferred": "Black Jack"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 10,
+                                "duration": 50,
+                                "season": "FALL",
+                                "seasonYear": 1993,
+                                "averageScore": 76,
+                                "popularity": 12179,
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Mystery",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "Tezuka Productions"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1520-4AFl8cpVoRQU.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1520-4AFl8cpVoRQU.jpg",
+                                    "color": "#e4aea1"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Young Black Jack [TV]",
+                            "is_optional": true,
+                            "media": {
+                                "id": 21187,
+                                "idMal": 30740,
+                                "title": {
+                                    "romaji": "Young Black Jack",
+                                    "english": "Young Black Jack",
+                                    "native": "ヤング ブラック・ジャック",
+                                    "userPreferred": "Young Black Jack"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 24,
+                                "season": "FALL",
+                                "seasonYear": 2015,
+                                "averageScore": 68,
+                                "popularity": 18040,
+                                "genres": [
+                                    "Drama"
+                                ],
+                                "studios": [
+                                    "Tezuka Productions"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21187-qpdxAWEZcXe2.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21187-qpdxAWEZcXe2.jpg",
+                                    "color": "#f1d6ae"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Black Rock Shooter",
             "alternative_titles": [],
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
+                    "name": "Main Story",
                     "description": null,
                     "steps": [
+                        {
+                            "step_title": "Black Rock Shooter [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 11285,
+                                "idMal": 11285,
+                                "title": {
+                                    "romaji": "Black★Rock Shooter (TV)",
+                                    "english": "Black Rock Shooter",
+                                    "native": "ブラック★ロックシューター (TV)",
+                                    "userPreferred": "Black★Rock Shooter (TV)"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 8,
+                                "duration": 23,
+                                "season": "WINTER",
+                                "seasonYear": 2012,
+                                "averageScore": 63,
+                                "popularity": 62773,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Psychological",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "Ordet",
+                                    "SANZIGEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11285-uO6GgQUjikbf.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11285-uO6GgQUjikbf.jpg",
+                                    "color": "#d6ae6b"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Black★Rock Shooter [OVA]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 7059,
+                                "idMal": 7059,
+                                "title": {
+                                    "romaji": "Black★Rock Shooter (OVA)",
+                                    "english": null,
+                                    "native": "ブラック★ロックシューター (OVA)",
+                                    "userPreferred": "Black★Rock Shooter (OVA)"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 52,
+                                "season": "SUMMER",
+                                "seasonYear": 2010,
+                                "averageScore": 66,
+                                "popularity": 28189,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "Ordet"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7059-8fqxS4nNzbq7.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx7059-8fqxS4nNzbq7.jpg",
+                                    "color": "#1aaed6"
+                                }
+                            }
+                        },
                         {
                             "step_title": "Black Rock Shooter: Dawn Fall",
                             "is_optional": false,
@@ -3201,6 +4651,299 @@
                                     "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/6479.jpg",
                                     "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/6479.jpg",
                                     "color": "#f1d6c9"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Captain Harlock",
+            "alternative_titles": [],
+            "entry_notes": "Note:",
+            "watch_orders": [
+                {
+                    "name": "Main Story",
+                    "description": null,
+                    "steps": [
+                        {
+                            "step_title": "Space Pirate Captain Harlock Episodes 1-13 [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 1000,
+                                "idMal": 1000,
+                                "title": {
+                                    "romaji": "Uchuu Kaizoku Captain Harlock",
+                                    "english": "Captain Harlock Space Pirate",
+                                    "native": "宇宙海賊キャプテンハーロック",
+                                    "userPreferred": "Uchuu Kaizoku Captain Harlock"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 42,
+                                "duration": 25,
+                                "season": "SPRING",
+                                "seasonYear": 1978,
+                                "averageScore": 73,
+                                "popularity": 10817,
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "Toei Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1000-Xpeob9jND2tg.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1000-Xpeob9jND2tg.jpg",
+                                    "color": "#a14328"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Space Pirate Captain Harlock: Riddle of the Arcadia Episode [Movie]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 2470,
+                                "idMal": 2470,
+                                "title": {
+                                    "romaji": "Uchuu Kaizoku Captain Harlock: Arcadia-gou no Nazo",
+                                    "english": "Space Pirate Captain Harlock: Riddle of the Arcadia Episode",
+                                    "native": "宇宙海賊キャプテン・ハーロック　アルカディア号の謎",
+                                    "userPreferred": "Uchuu Kaizoku Captain Harlock: Arcadia-gou no Nazo"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 35,
+                                "season": "SUMMER",
+                                "seasonYear": 1978,
+                                "averageScore": 65,
+                                "popularity": 1726,
+                                "genres": [
+                                    "Action",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "Toei Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/2470-t0BnhV4HTPeU.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/2470-t0BnhV4HTPeU.png",
+                                    "color": "#934328"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Waga Seishun no Arcadia [Movie]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 2202,
+                                "idMal": 2202,
+                                "title": {
+                                    "romaji": "Waga Seishun no Arcadia",
+                                    "english": "Captain Harlock: Arcadia of my Youth",
+                                    "native": "わが青春のアルカディア",
+                                    "userPreferred": "Waga Seishun no Arcadia"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 130,
+                                "season": "SUMMER",
+                                "seasonYear": 1982,
+                                "averageScore": 73,
+                                "popularity": 3998,
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "Toei Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2202-mARxwjZ7oXO4.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2202-mARxwjZ7oXO4.jpg",
+                                    "color": "#ae4328"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Endless Orbit SSX [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 2203,
+                                "idMal": 2203,
+                                "title": {
+                                    "romaji": "Waga Seishun no Arcadia: Mugen Kidou SSX",
+                                    "english": "Captain Harlock: Arcadia of my Youth - Endless Orbit SSX",
+                                    "native": "わが青春のアルカディア・無限軌道ＳＳＸ",
+                                    "userPreferred": "Waga Seishun no Arcadia: Mugen Kidou SSX"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 22,
+                                "duration": 25,
+                                "season": "FALL",
+                                "seasonYear": 1982,
+                                "averageScore": 71,
+                                "popularity": 2564,
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "Toei Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2203-2SKplVCINxKb.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2203-2SKplVCINxKb.jpg",
+                                    "color": "#e4bb28"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Harlock Saga: The Ring of the Nibelung - The Rhein Gold [OVA]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 1645,
+                                "idMal": 1645,
+                                "title": {
+                                    "romaji": "Harlock Saga: Nibelung no Yubiwa",
+                                    "english": "Harlock Saga: The Ring of the Nibelung",
+                                    "native": "ハーロック・サーガ ニーベルングの指環",
+                                    "userPreferred": "Harlock Saga: Nibelung no Yubiwa"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 6,
+                                "duration": 30,
+                                "season": "WINTER",
+                                "seasonYear": 1999,
+                                "averageScore": 62,
+                                "popularity": 1841,
+                                "genres": [
+                                    "Adventure",
+                                    "Drama",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1645-P6yalm0MORsY.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1645-P6yalm0MORsY.jpg",
+                                    "color": "#d6431a"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Gun Frontier [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 1706,
+                                "idMal": 1706,
+                                "title": {
+                                    "romaji": "Gun Frontier",
+                                    "english": null,
+                                    "native": "ガンフロンティア",
+                                    "userPreferred": "Gun Frontier"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 25,
+                                "season": "SPRING",
+                                "seasonYear": 2002,
+                                "averageScore": 62,
+                                "popularity": 3014,
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "Vega Entertainment"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1706.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1706.jpg",
+                                    "color": "#e4ae5d"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Space Pirate Captain Herlock: Outside Legend - The Endless Odyssey [OVA]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 1081,
+                                "idMal": 1081,
+                                "title": {
+                                    "romaji": "SPACE PIRATE CAPTAIN HERLOCK: OUTSIDE LEGEND - The Endless Odyssey",
+                                    "english": null,
+                                    "native": "SPACE PIRATE CAPTAIN HERLOCK OUTSIDE LEGEND 〜The Endless Odyssey〜",
+                                    "userPreferred": "SPACE PIRATE CAPTAIN HERLOCK: OUTSIDE LEGEND - The Endless Odyssey"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 25,
+                                "season": "FALL",
+                                "seasonYear": 2002,
+                                "averageScore": 69,
+                                "popularity": 2309,
+                                "genres": [
+                                    "Action",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "MADHOUSE"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx1081-FW0DHatfkBma.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx1081-FW0DHatfkBma.jpg",
+                                    "color": "#f1c9bb"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Space Pirate Captain Harlock [Movie]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 17269,
+                                "idMal": 17269,
+                                "title": {
+                                    "romaji": "Uchuu Kaizoku Captain Harlock",
+                                    "english": "Harlock: Space Pirate",
+                                    "native": "宇宙海賊キャプテンハーロック",
+                                    "userPreferred": "Uchuu Kaizoku Captain Harlock"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 115,
+                                "season": "FALL",
+                                "seasonYear": 2013,
+                                "averageScore": 70,
+                                "popularity": 10506,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "Toei Animation",
+                                    "Marza Animation Planet"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx17269-PTlucMYOYZWn.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx17269-PTlucMYOYZWn.jpg",
+                                    "color": "#1a6ba1"
                                 }
                             }
                         }
@@ -4042,6 +5785,197 @@
             ]
         },
         {
+            "title": "Clannad",
+            "alternative_titles": [],
+            "entry_notes": "Note:",
+            "watch_orders": [
+                {
+                    "name": "Main Story",
+                    "description": null,
+                    "steps": [
+                        {
+                            "step_title": "Clannad [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 2167,
+                                "idMal": 2167,
+                                "title": {
+                                    "romaji": "CLANNAD",
+                                    "english": "Clannad",
+                                    "native": "ＣＬＡＮＮＡＤ -クラナド-",
+                                    "userPreferred": "CLANNAD"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 23,
+                                "duration": 24,
+                                "season": "FALL",
+                                "seasonYear": 2007,
+                                "averageScore": 77,
+                                "popularity": 261275,
+                                "genres": [
+                                    "Comedy",
+                                    "Drama",
+                                    "Romance",
+                                    "Slice of Life",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "Kyoto Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2167-pSDBcyc0vjej.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2167-pSDBcyc0vjej.jpg",
+                                    "color": "#bbbbff"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Clannad : Another World, Kyou Chapter [Special]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 6351,
+                                "idMal": 6351,
+                                "title": {
+                                    "romaji": "CLANNAD: After Story - Mou Hitotsu no Sekai, Kyou-hen",
+                                    "english": "Clannad: Another World, Kyou Chapter",
+                                    "native": "ＣＬＡＮＮＡＤ ~After Story~ もうひとつの世界 杏編",
+                                    "userPreferred": "CLANNAD: After Story - Mou Hitotsu no Sekai, Kyou-hen"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 24,
+                                "season": "SUMMER",
+                                "seasonYear": 2009,
+                                "averageScore": 74,
+                                "popularity": 51220,
+                                "genres": [
+                                    "Drama",
+                                    "Romance",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "Kyoto Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/6351.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/6351.jpg",
+                                    "color": "#e45d78"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Clannad: Another World, Tomoyo Chapter [Special]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 4059,
+                                "idMal": 4059,
+                                "title": {
+                                    "romaji": "CLANNAD: Mou Hitotsu no Sekai, Tomoyo-hen",
+                                    "english": "Clannad: Another World, Tomoyo Chapter",
+                                    "native": "ＣＬＡＮＮＡＤ もうひとつの世界 智代編",
+                                    "userPreferred": "CLANNAD: Mou Hitotsu no Sekai, Tomoyo-hen"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 25,
+                                "season": "SUMMER",
+                                "seasonYear": 2008,
+                                "averageScore": 76,
+                                "popularity": 58646,
+                                "genres": [
+                                    "Drama",
+                                    "Romance",
+                                    "Slice of Life"
+                                ],
+                                "studios": [
+                                    "Kyoto Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b4059-mrA0Wky7bTgz.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b4059-mrA0Wky7bTgz.jpg",
+                                    "color": "#f15d78"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Clannad: Afterstory [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 4181,
+                                "idMal": 4181,
+                                "title": {
+                                    "romaji": "CLANNAD: After Story",
+                                    "english": "Clannad: After Story",
+                                    "native": "ＣＬＡＮＮＡＤ ~After Story~ クラナド アフターストーリー",
+                                    "userPreferred": "CLANNAD: After Story"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 24,
+                                "duration": 24,
+                                "season": "FALL",
+                                "seasonYear": 2008,
+                                "averageScore": 87,
+                                "popularity": 199026,
+                                "genres": [
+                                    "Drama",
+                                    "Romance",
+                                    "Slice of Life",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "Kyoto Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4181-zUKE7BZC62OF.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4181-zUKE7BZC62OF.png",
+                                    "color": "#f1e450"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Clannad The Motion Picture [Movie]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 1723,
+                                "idMal": 1723,
+                                "title": {
+                                    "romaji": "Clannad Movie",
+                                    "english": "Clannad: The Motion Picture",
+                                    "native": "劇場版 クラナド",
+                                    "userPreferred": "Clannad Movie"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 94,
+                                "season": "SUMMER",
+                                "seasonYear": 2007,
+                                "averageScore": 66,
+                                "popularity": 28748,
+                                "genres": [
+                                    "Drama",
+                                    "Fantasy",
+                                    "Romance"
+                                ],
+                                "studios": [
+                                    "Toei Animation"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1723-PzMdQPvfcxxA.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1723-PzMdQPvfcxxA.png",
+                                    "color": null
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Code Geass",
             "alternative_titles": [],
             "entry_notes": "Note:",
@@ -4500,6 +6434,92 @@
             ]
         },
         {
+            "title": "Cowboy Bebop",
+            "alternative_titles": [],
+            "entry_notes": "Note:",
+            "watch_orders": [
+                {
+                    "name": "Main Story",
+                    "description": null,
+                    "steps": [
+                        {
+                            "step_title": "Cowboy Bebop Episodes 1-22 [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 1,
+                                "idMal": 1,
+                                "title": {
+                                    "romaji": "Cowboy Bebop",
+                                    "english": "Cowboy Bebop",
+                                    "native": "カウボーイビバップ",
+                                    "userPreferred": "Cowboy Bebop"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 26,
+                                "duration": 24,
+                                "season": "SPRING",
+                                "seasonYear": 1998,
+                                "averageScore": 86,
+                                "popularity": 407903,
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "Sunrise"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-GCsPm7waJ4kS.png",
+                                    "color": "#f16b50"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Cowboy Bebop: The Movie",
+                            "is_optional": false,
+                            "media": {
+                                "id": 5,
+                                "idMal": 5,
+                                "title": {
+                                    "romaji": "Cowboy Bebop: Tengoku no Tobira",
+                                    "english": "Cowboy Bebop: The Movie - Knockin' on Heaven's Door",
+                                    "native": "カウボーイビバップ天国の扉",
+                                    "userPreferred": "Cowboy Bebop: Tengoku no Tobira"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 115,
+                                "season": "SUMMER",
+                                "seasonYear": 2001,
+                                "averageScore": 82,
+                                "popularity": 75275,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Mystery",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "bones",
+                                    "Sunrise"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5-NozHwXWdNLCz.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5-NozHwXWdNLCz.jpg",
+                                    "color": "#f13500"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Crest of the Stars",
             "alternative_titles": [],
             "entry_notes": null,
@@ -4692,9 +6712,158 @@
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
-                    "description": "It is advised to use the thread linked above for a more detailed play/watch/read order. The thread also answers frequently asked questions.",
+                    "name": "Main Story",
+                    "description": null,
                     "steps": [
+                        {
+                            "step_title": "Danganronpa 3: The End of Kibougamine Gakuen - Mirai-hen [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 21509,
+                                "idMal": 32189,
+                                "title": {
+                                    "romaji": "Danganronpa 3: The End of Kibougamine Gakuen - Mirai-hen",
+                                    "english": "Danganronpa 3: The End of Hope’s Peak High School - Future Arc",
+                                    "native": "ダンガンロンパ３ –The End of 希望ヶ峰学園– 未来編",
+                                    "userPreferred": "Danganronpa 3: The End of Kibougamine Gakuen - Mirai-hen"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 24,
+                                "season": "SUMMER",
+                                "seasonYear": 2016,
+                                "averageScore": 68,
+                                "popularity": 82088,
+                                "genres": [
+                                    "Action",
+                                    "Horror",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Sci-Fi",
+                                    "Thriller"
+                                ],
+                                "studios": [
+                                    "Lerche"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21509-3Ih7TTU0Romm.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21509-3Ih7TTU0Romm.jpg",
+                                    "color": "#933528"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Danganronpa 3: The End of Kibougamine Gakuen - Zetsubou-hen [TV]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 21825,
+                                "idMal": 33028,
+                                "title": {
+                                    "romaji": "Danganronpa 3: The End of Kibougamine Gakuen - Zetsubou-hen",
+                                    "english": "Danganronpa 3: The End of Hope’s Peak High School - Despair Arc",
+                                    "native": "ダンガンロンパ3 -The End of 希望ヶ峰学園-　絶望編",
+                                    "userPreferred": "Danganronpa 3: The End of Kibougamine Gakuen - Zetsubou-hen"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 11,
+                                "duration": 24,
+                                "season": "SUMMER",
+                                "seasonYear": 2016,
+                                "averageScore": 71,
+                                "popularity": 80679,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Horror",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Sci-Fi",
+                                    "Thriller"
+                                ],
+                                "studios": [
+                                    "Lerche"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21825-OjVRUQwM8bTz.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21825-OjVRUQwM8bTz.png",
+                                    "color": "#c9001a"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Danganronpa 3: The End of Kibougamine Gakuen - Kibou-hen [Special]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 97672,
+                                "idMal": 34103,
+                                "title": {
+                                    "romaji": "Danganronpa 3: The End of Kibougamine Gakuen - Kibou-hen",
+                                    "english": "Danganronpa 3: The End of Hope's Peak High School - Hope Arc",
+                                    "native": "ダンガンロンパ３-The End of 希望ヶ峰学園-希望編",
+                                    "userPreferred": "Danganronpa 3: The End of Kibougamine Gakuen - Kibou-hen"
+                                },
+                                "format": "SPECIAL",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 24,
+                                "season": "FALL",
+                                "seasonYear": 2016,
+                                "averageScore": 70,
+                                "popularity": 51313,
+                                "genres": [
+                                    "Action",
+                                    "Psychological",
+                                    "Sci-Fi",
+                                    "Thriller"
+                                ],
+                                "studios": [
+                                    "Lerche"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97672-BRm6bIWQfI2v.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97672-BRm6bIWQfI2v.jpg",
+                                    "color": "#e4c950"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Super Danganronpa 2.5: Komaeda Nagito to Sekai no Hakaimono [OVA]",
+                            "is_optional": false,
+                            "media": {
+                                "id": 98153,
+                                "idMal": 34152,
+                                "title": {
+                                    "romaji": "Super Danganronpa 2.5 Komaeda Nagito to Sekai no Hakaimono",
+                                    "english": null,
+                                    "native": "スーパーダンガンロンパ2.5 狛枝凪斗と世界の破壊者",
+                                    "userPreferred": "Super Danganronpa 2.5 Komaeda Nagito to Sekai no Hakaimono"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 25,
+                                "season": "WINTER",
+                                "seasonYear": 2017,
+                                "averageScore": 69,
+                                "popularity": 31221,
+                                "genres": [
+                                    "Action",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Sci-Fi"
+                                ],
+                                "studios": [
+                                    "Lerche"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b98153-KX7tTXRV23oh.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b98153-KX7tTXRV23oh.jpg",
+                                    "color": "#861a5d"
+                                }
+                            }
+                        },
                         {
                             "step_title": "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation",
                             "is_optional": false,
@@ -6105,13 +8274,7 @@
                                     "color": "#e4e45d"
                                 }
                             }
-                        }
-                    ]
-                },
-                {
-                    "name": "Note",
-                    "description": "Digimon Adventure 02: Zenpen Digimon Hurricane Jouriku!! is considered non-canonical because of some events contradicting those of the series.",
-                    "steps": [
+                        },
                         {
                             "step_title": "Digimon Tamers Episodes 1-23 [TV]",
                             "is_optional": false,
@@ -13628,7 +15791,7 @@
                 },
                 {
                     "name": "¯\\_(ツ)_/¯",
-                    "description": null,
+                    "description": "Special Notes Footnote for shows with asterisks from above",
                     "steps": [
                         {
                             "step_title": "Gundam-san",
@@ -16749,9 +18912,390 @@
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
-                    "description": "New Initial D: Movie trilogy that retells some events from First Stage. Features great animation, but lacks the bitching soundtrack that marked previous installments. It's an entirely new continuity. Only recommend to viewers who have already watched Initial D. It cuts out a bunch of details, characers development, and races.",
+                    "name": "Main Story",
+                    "description": null,
                     "steps": [
+                        {
+                            "step_title": "First stage",
+                            "is_optional": false,
+                            "media": {
+                                "id": 185,
+                                "idMal": 185,
+                                "title": {
+                                    "romaji": "Initial D",
+                                    "english": "Initial D 1st Stage",
+                                    "native": "頭文字D",
+                                    "userPreferred": "Initial D"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 26,
+                                "duration": 25,
+                                "season": "SPRING",
+                                "seasonYear": 1998,
+                                "averageScore": 82,
+                                "popularity": 99557,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "Studio Comet",
+                                    "Studio Gallop"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b185-GvXiR8AKTmdn.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b185-GvXiR8AKTmdn.jpg",
+                                    "color": "#e45043"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Second Stage",
+                            "is_optional": false,
+                            "media": {
+                                "id": 186,
+                                "idMal": 186,
+                                "title": {
+                                    "romaji": "Initial D SECOND STAGE",
+                                    "english": "Initial D 2nd Stage",
+                                    "native": "頭文字〈イニシャル〉D SECOND STAGE",
+                                    "userPreferred": "Initial D SECOND STAGE"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 13,
+                                "duration": 23,
+                                "season": "FALL",
+                                "seasonYear": 1999,
+                                "averageScore": 80,
+                                "popularity": 51810,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "Pastel"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b186-eygBSoYwLCYt.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b186-eygBSoYwLCYt.jpg",
+                                    "color": "#f1c935"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Third stage",
+                            "is_optional": false,
+                            "media": {
+                                "id": 187,
+                                "idMal": 187,
+                                "title": {
+                                    "romaji": "Initial D THIRD STAGE",
+                                    "english": "Initial D 3rd Stage",
+                                    "native": "頭文字〈イニシャル〉D THIRD STAGE",
+                                    "userPreferred": "Initial D THIRD STAGE"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 104,
+                                "season": "WINTER",
+                                "seasonYear": 2001,
+                                "averageScore": 78,
+                                "popularity": 43840,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Romance",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "Studio DEEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx187-QyCAlBGY3EWw.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx187-QyCAlBGY3EWw.jpg",
+                                    "color": "#e4ae1a"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Fourth Stage",
+                            "is_optional": false,
+                            "media": {
+                                "id": 18,
+                                "idMal": 18,
+                                "title": {
+                                    "romaji": "Initial D FOURTH STAGE",
+                                    "english": "Initial D 4th Stage",
+                                    "native": "頭文字〈イニシャル〉D FOURTH STAGE",
+                                    "userPreferred": "Initial D FOURTH STAGE"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 24,
+                                "duration": 27,
+                                "season": "SPRING",
+                                "seasonYear": 2004,
+                                "averageScore": 80,
+                                "popularity": 43323,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "A.C.G.T."
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b18-r7IirVmwP89u.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b18-r7IirVmwP89u.jpg",
+                                    "color": "#e46b50"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Fifth stage",
+                            "is_optional": false,
+                            "media": {
+                                "id": 15059,
+                                "idMal": 15059,
+                                "title": {
+                                    "romaji": "Initial D Fifth Stage",
+                                    "english": null,
+                                    "native": "頭文字〈イニシャル〉D Fifth Stage",
+                                    "userPreferred": "Initial D Fifth Stage"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 14,
+                                "duration": 27,
+                                "season": "FALL",
+                                "seasonYear": 2012,
+                                "averageScore": 79,
+                                "popularity": 36333,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "SynergySP"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/15059.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/15059.jpg",
+                                    "color": "#e4280d"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Final Stage",
+                            "is_optional": false,
+                            "media": {
+                                "id": 19613,
+                                "idMal": 22507,
+                                "title": {
+                                    "romaji": "Initial D Final Stage",
+                                    "english": null,
+                                    "native": "頭文字〈イニシャル〉D Final Stage",
+                                    "userPreferred": "Initial D Final Stage"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 4,
+                                "duration": 27,
+                                "season": "SPRING",
+                                "seasonYear": 2014,
+                                "averageScore": 81,
+                                "popularity": 34613,
+                                "genres": [
+                                    "Action",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "SynergySP"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19613-5vb40lsFXudd.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx19613-5vb40lsFXudd.png",
+                                    "color": "#f11a28"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Extra Stage 1",
+                            "is_optional": false,
+                            "media": {
+                                "id": 822,
+                                "idMal": 822,
+                                "title": {
+                                    "romaji": "Initial D EXTRA STAGE",
+                                    "english": "Initial D Extra Stage",
+                                    "native": "頭文字〈イニシャル〉D EXTRA STAGE",
+                                    "userPreferred": "Initial D EXTRA STAGE"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 2,
+                                "duration": 27,
+                                "season": "SPRING",
+                                "seasonYear": 2001,
+                                "averageScore": 71,
+                                "popularity": 14610,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "Pastel"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx822-JgdEklwoIOxm.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx822-JgdEklwoIOxm.jpg",
+                                    "color": "#d61a1a"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Extra Stage 2",
+                            "is_optional": false,
+                            "media": {
+                                "id": 5228,
+                                "idMal": 5228,
+                                "title": {
+                                    "romaji": "Initial D Extra Stage 2",
+                                    "english": "Initial D Extra Stage 2",
+                                    "native": "頭文字〈イニシャル〉D Extra Stage 2",
+                                    "userPreferred": "Initial D Extra Stage 2"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 54,
+                                "season": "FALL",
+                                "seasonYear": 2008,
+                                "averageScore": 71,
+                                "popularity": 10522,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Sports"
+                                ],
+                                "studios": [],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5228.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5228.jpg",
+                                    "color": "#5dbbe4"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Battle Stage 1",
+                            "is_optional": false,
+                            "media": {
+                                "id": 821,
+                                "idMal": 821,
+                                "title": {
+                                    "romaji": "Initial D BATTLE STAGE",
+                                    "english": null,
+                                    "native": "頭文字〈イニシャル〉D BATTLE STAGE",
+                                    "userPreferred": "Initial D BATTLE STAGE"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 53,
+                                "season": "SPRING",
+                                "seasonYear": 2002,
+                                "averageScore": 73,
+                                "popularity": 8904,
+                                "genres": [
+                                    "Action",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "Pastel"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/821.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/821.jpg",
+                                    "color": "#e45028"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Battle Stage 2",
+                            "is_optional": false,
+                            "media": {
+                                "id": 3931,
+                                "idMal": 3931,
+                                "title": {
+                                    "romaji": "Initial D BATTLE STAGE 2",
+                                    "english": null,
+                                    "native": "頭文字〈イニシャル〉D BATTLE STAGE 2",
+                                    "userPreferred": "Initial D BATTLE STAGE 2"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 80,
+                                "season": "SPRING",
+                                "seasonYear": 2007,
+                                "averageScore": 73,
+                                "popularity": 7029,
+                                "genres": [
+                                    "Action",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "A.C.G.T."
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/3931.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/3931.jpg",
+                                    "color": "#6b501a"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Battle Stage 3",
+                            "is_optional": false,
+                            "media": {
+                                "id": 132634,
+                                "idMal": 47410,
+                                "title": {
+                                    "romaji": "Initial D BATTLE STAGE 3",
+                                    "english": null,
+                                    "native": "頭文字〈イニシャル〉D BATTLE STAGE 3 ",
+                                    "userPreferred": "Initial D BATTLE STAGE 3"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 93,
+                                "season": "WINTER",
+                                "seasonYear": 2021,
+                                "averageScore": 71,
+                                "popularity": 2860,
+                                "genres": [
+                                    "Action",
+                                    "Sports"
+                                ],
+                                "studios": [
+                                    "SynergySP"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx132634-ePR2y63z2sZO.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx132634-ePR2y63z2sZO.jpg",
+                                    "color": "#d6f150"
+                                }
+                            }
+                        },
                         {
                             "step_title": "New Initial D",
                             "is_optional": false,
@@ -19185,9 +21729,226 @@
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
-                    "description": "It should be mentioned thatKonoSuba: An Explosion on This Wonderful World!is a spinoff series that features Megumin. While it is technically a prequel to the series, and can be watched anywhere, it should probably be watched after finishing Season 2, as some of the jokes are contingent on knowing the events of the main series.",
+                    "name": "Main Story",
+                    "description": null,
                     "steps": [
+                        {
+                            "step_title": "Konosuba Season 1",
+                            "is_optional": false,
+                            "media": {
+                                "id": 21202,
+                                "idMal": 30831,
+                                "title": {
+                                    "romaji": "Kono Subarashii Sekai ni Shukufuku wo!",
+                                    "english": "KONOSUBA -God's blessing on this wonderful world!",
+                                    "native": "この素晴らしい世界に祝福を！",
+                                    "userPreferred": "Kono Subarashii Sekai ni Shukufuku wo!"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 10,
+                                "duration": 23,
+                                "season": "WINTER",
+                                "seasonYear": 2016,
+                                "averageScore": 79,
+                                "popularity": 449247,
+                                "genres": [
+                                    "Adventure",
+                                    "Comedy",
+                                    "Ecchi",
+                                    "Fantasy"
+                                ],
+                                "studios": [
+                                    "Studio DEEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21202-qQoJeKz76vRT.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21202-qQoJeKz76vRT.png",
+                                    "color": "#5daee4"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Konosuba Season 2 episodes 1-4",
+                            "is_optional": false,
+                            "media": {
+                                "id": 21699,
+                                "idMal": 32937,
+                                "title": {
+                                    "romaji": "Kono Subarashii Sekai ni Shukufuku wo! 2",
+                                    "english": "KONOSUBA -God's blessing on this wonderful world! 2",
+                                    "native": "この素晴らしい世界に祝福を！2",
+                                    "userPreferred": "Kono Subarashii Sekai ni Shukufuku wo! 2"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 10,
+                                "duration": 23,
+                                "season": "WINTER",
+                                "seasonYear": 2017,
+                                "averageScore": 81,
+                                "popularity": 330249,
+                                "genres": [
+                                    "Adventure",
+                                    "Comedy",
+                                    "Ecchi",
+                                    "Fantasy"
+                                ],
+                                "studios": [
+                                    "Studio DEEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21699-Fkbnkl9ZC6fW.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21699-Fkbnkl9ZC6fW.png",
+                                    "color": "#f1a150"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Konosuba OVA 1",
+                            "is_optional": false,
+                            "media": {
+                                "id": 21574,
+                                "idMal": 32380,
+                                "title": {
+                                    "romaji": "Kono Subarashii Sekai ni Shukufuku wo!: Kono Subarashii Choker ni Shukufuku wo!",
+                                    "english": "KONOSUBA -God's blessing on this wonderful world!: God's Blessings On This Wonderful Choker!",
+                                    "native": "この素晴らしい世界に祝福を！ この素晴らしいチョーカーに祝福を!",
+                                    "userPreferred": "Kono Subarashii Sekai ni Shukufuku wo!: Kono Subarashii Choker ni Shukufuku wo!"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 24,
+                                "season": "SPRING",
+                                "seasonYear": 2016,
+                                "averageScore": 76,
+                                "popularity": 112594,
+                                "genres": [
+                                    "Comedy",
+                                    "Ecchi",
+                                    "Fantasy"
+                                ],
+                                "studios": [
+                                    "Studio DEEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21574-CTRsdAGe4mDp.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21574-CTRsdAGe4mDp.png",
+                                    "color": "#e4bb28"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Konosuba OVA 2",
+                            "is_optional": false,
+                            "media": {
+                                "id": 97996,
+                                "idMal": 34626,
+                                "title": {
+                                    "romaji": "Kono Subarashii Sekai ni Shukufuku wo! 2: Kono Subarashii Geijutsu ni Shukufuku wo!",
+                                    "english": "KONOSUBA -God's blessing on this wonderful world! 2: God's Blessings on These Wonderful Works of Art!",
+                                    "native": "この素晴らしい世界に祝福を！ 2 この素晴らしい芸術に祝福を!",
+                                    "userPreferred": "Kono Subarashii Sekai ni Shukufuku wo! 2: Kono Subarashii Geijutsu ni Shukufuku wo!"
+                                },
+                                "format": "OVA",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 29,
+                                "season": "SUMMER",
+                                "seasonYear": 2017,
+                                "averageScore": 78,
+                                "popularity": 100100,
+                                "genres": [
+                                    "Adventure",
+                                    "Comedy",
+                                    "Fantasy"
+                                ],
+                                "studios": [
+                                    "Studio DEEN"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b97996-px2KGexuEZpg.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b97996-px2KGexuEZpg.jpg",
+                                    "color": "#f1a150"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Konosuba Movie",
+                            "is_optional": false,
+                            "media": {
+                                "id": 102976,
+                                "idMal": 38040,
+                                "title": {
+                                    "romaji": "Kono Subarashii Sekai ni Shukufuku wo! Kurenai Densetsu",
+                                    "english": "KONOSUBA -God's blessing on this wonderful world!- Legend of Crimson",
+                                    "native": "この素晴らしい世界に祝福を！紅伝説",
+                                    "userPreferred": "Kono Subarashii Sekai ni Shukufuku wo! Kurenai Densetsu"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 90,
+                                "season": "SUMMER",
+                                "seasonYear": 2019,
+                                "averageScore": 82,
+                                "popularity": 210760,
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Comedy",
+                                    "Ecchi",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "studios": [
+                                    "J.C.STAFF"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx102976-2Yi5icRbjukO.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx102976-2Yi5icRbjukO.png",
+                                    "color": "#50bbe4"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Konosuba Season 3",
+                            "is_optional": false,
+                            "media": {
+                                "id": 136804,
+                                "idMal": 49458,
+                                "title": {
+                                    "romaji": "Kono Subarashii Sekai ni Shukufuku wo! 3",
+                                    "english": "KONOSUBA -God's blessing on this wonderful world! 3",
+                                    "native": "この素晴らしい世界に祝福を！３",
+                                    "userPreferred": "Kono Subarashii Sekai ni Shukufuku wo! 3"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 11,
+                                "duration": 24,
+                                "season": "SPRING",
+                                "seasonYear": 2024,
+                                "averageScore": 82,
+                                "popularity": 142512,
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Comedy",
+                                    "Ecchi",
+                                    "Fantasy"
+                                ],
+                                "studios": [
+                                    "Drive"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136804-7FVftG67FPBc.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx136804-7FVftG67FPBc.jpg",
+                                    "color": "#3586e4"
+                                }
+                            }
+                        },
                         {
                             "step_title": "KonoSuba: An Explosion on This Wonderful World!",
                             "is_optional": false,
@@ -20605,8 +23366,8 @@
                                 "duration": 25,
                                 "season": "FALL",
                                 "seasonYear": 2022,
-                                "averageScore": 80,
-                                "popularity": 5017,
+                                "averageScore": 81,
+                                "popularity": 5016,
                                 "genres": [
                                     "Action",
                                     "Drama",
@@ -22586,9 +25347,194 @@
             "entry_notes": "Note:",
             "watch_orders": [
                 {
-                    "name": "Note",
+                    "name": "Main Story",
                     "description": null,
                     "steps": [
+                        {
+                            "step_title": "Mahou Shoujo Madoka Magica",
+                            "is_optional": false,
+                            "media": {
+                                "id": 9756,
+                                "idMal": 9756,
+                                "title": {
+                                    "romaji": "Mahou Shoujo Madoka☆Magica",
+                                    "english": "Puella Magi Madoka Magica",
+                                    "native": "魔法少女まどか☆マギカ",
+                                    "userPreferred": "Mahou Shoujo Madoka☆Magica"
+                                },
+                                "format": "TV",
+                                "status": "FINISHED",
+                                "episodes": 12,
+                                "duration": 24,
+                                "season": "WINTER",
+                                "seasonYear": 2011,
+                                "averageScore": 83,
+                                "popularity": 283993,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Mahou Shoujo",
+                                    "Psychological",
+                                    "Thriller"
+                                ],
+                                "studios": [
+                                    "Shaft"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9756-QnUGwlwwnsuN.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9756-QnUGwlwwnsuN.jpg",
+                                    "color": "#f1c95d"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari",
+                            "is_optional": false,
+                            "media": {
+                                "id": 11981,
+                                "idMal": 11981,
+                                "title": {
+                                    "romaji": "Mahou Shoujo Madoka☆Magica: Hangyaku no Monogatari",
+                                    "english": "Puella Magi Madoka Magica the Movie Part III: Rebellion",
+                                    "native": "劇場版 魔法少女まどか☆マギカ 叛逆の物語",
+                                    "userPreferred": "Mahou Shoujo Madoka☆Magica: Hangyaku no Monogatari"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 118,
+                                "season": "FALL",
+                                "seasonYear": 2013,
+                                "averageScore": 84,
+                                "popularity": 103773,
+                                "genres": [
+                                    "Drama",
+                                    "Fantasy",
+                                    "Mahou Shoujo",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Thriller"
+                                ],
+                                "studios": [
+                                    "Shaft"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b11981-koz1IoISs3eU.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b11981-koz1IoISs3eU.jpg",
+                                    "color": null
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Mahou Shoujo Madoka★Magica Movie 4: Walpurgis no Kaiten",
+                            "is_optional": false,
+                            "media": {
+                                "id": 133007,
+                                "idMal": 48820,
+                                "title": {
+                                    "romaji": "Mahou Shoujo Madoka☆Magica: Walpurgis no Kaiten",
+                                    "english": "Puella Magi Madoka Magica the Movie -Walpurgisnacht: Rising-",
+                                    "native": "劇場版 魔法少女まどか☆マギカ〈ワルプルギスの廻天〉",
+                                    "userPreferred": "Mahou Shoujo Madoka☆Magica: Walpurgis no Kaiten"
+                                },
+                                "format": "MOVIE",
+                                "status": "NOT_YET_RELEASED",
+                                "episodes": 1,
+                                "duration": null,
+                                "season": null,
+                                "seasonYear": null,
+                                "averageScore": null,
+                                "popularity": 33826,
+                                "genres": [
+                                    "Mahou Shoujo"
+                                ],
+                                "studios": [
+                                    "Shaft"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133007-5gOUXDvzxy9S.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx133007-5gOUXDvzxy9S.jpg",
+                                    "color": "#e4935d"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Movie 1",
+                            "is_optional": false,
+                            "media": {
+                                "id": 11977,
+                                "idMal": 11977,
+                                "title": {
+                                    "romaji": "Mahou Shoujo Madoka☆Magica: Hajimari no Monogatari",
+                                    "english": "Puella Magi Madoka Magica the Movie Part I: Beginnings",
+                                    "native": "劇場版 魔法少女まどか☆マギカ 始まりの物語",
+                                    "userPreferred": "Mahou Shoujo Madoka☆Magica: Hajimari no Monogatari"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 130,
+                                "season": "FALL",
+                                "seasonYear": 2012,
+                                "averageScore": 80,
+                                "popularity": 48304,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Mahou Shoujo",
+                                    "Psychological",
+                                    "Thriller"
+                                ],
+                                "studios": [
+                                    "Shaft"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11977-HxMeU4kjzSnE.png",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11977-HxMeU4kjzSnE.png",
+                                    "color": "#e4ae43"
+                                }
+                            }
+                        },
+                        {
+                            "step_title": "Movie 2",
+                            "is_optional": false,
+                            "media": {
+                                "id": 11979,
+                                "idMal": 11979,
+                                "title": {
+                                    "romaji": "Mahou Shoujo Madoka☆Magica: Eien no Monogatari",
+                                    "english": "Puella Magi Madoka Magica the Movie Part II: Eternal",
+                                    "native": "劇場版 魔法少女まどか☆マギカ 永遠の物語",
+                                    "userPreferred": "Mahou Shoujo Madoka☆Magica: Eien no Monogatari"
+                                },
+                                "format": "MOVIE",
+                                "status": "FINISHED",
+                                "episodes": 1,
+                                "duration": 109,
+                                "season": "FALL",
+                                "seasonYear": 2012,
+                                "averageScore": 81,
+                                "popularity": 47577,
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Mahou Shoujo",
+                                    "Psychological",
+                                    "Thriller"
+                                ],
+                                "studios": [
+                                    "Shaft"
+                                ],
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11979-oiKvt5UXyREg.jpg",
+                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11979-oiKvt5UXyREg.jpg",
+                                    "color": "#210854"
+                                }
+                            }
+                        },
                         {
                             "step_title": "Magia Record: Mahou Shoujo Madoka☆Magica Gaiden",
                             "is_optional": false,
@@ -32962,47 +35908,6 @@
                                     "color": null
                                 }
                             }
-                        }
-                    ]
-                },
-                {
-                    "name": "Notes",
-                    "description": "The Prequels can be watched anytime before or after any entry in the Main Story. They simply focus on the adventures of Lina and Naga and it is unnecessary to have seen the Prequels in order to understand the Main Story.",
-                    "steps": [
-                        {
-                            "step_title": "Slayers Premium",
-                            "is_optional": false,
-                            "media": {
-                                "id": 866,
-                                "idMal": 866,
-                                "title": {
-                                    "romaji": "Slayers Premium",
-                                    "english": null,
-                                    "native": "スレイヤーズぷれみあむ",
-                                    "userPreferred": "Slayers Premium"
-                                },
-                                "format": "MOVIE",
-                                "status": "FINISHED",
-                                "episodes": 1,
-                                "duration": 33,
-                                "season": "FALL",
-                                "seasonYear": 2001,
-                                "averageScore": 67,
-                                "popularity": 4032,
-                                "genres": [
-                                    "Adventure",
-                                    "Comedy",
-                                    "Fantasy"
-                                ],
-                                "studios": [
-                                    "Hal Film Maker"
-                                ],
-                                "coverImage": {
-                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx866-FBIvZY0F5aik.png",
-                                    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx866-FBIvZY0F5aik.png",
-                                    "color": null
-                                }
-                            }
                         },
                         {
                             "step_title": "Slayers Next",
@@ -36430,7 +39335,7 @@
                                 "season": "SPRING",
                                 "seasonYear": 2023,
                                 "averageScore": 80,
-                                "popularity": 14895,
+                                "popularity": 14940,
                                 "genres": [
                                     "Drama",
                                     "Slice of Life",
