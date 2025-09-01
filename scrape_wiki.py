@@ -56,7 +56,6 @@ def fetch_wiki_data(access_token):
 def fetch_anilist_data_batch(mal_ids):
     if not mal_ids:
         return {}
-    # Batched requests to not overload the API
     mal_id_chunks = [mal_ids[i:i + 50] for i in range(0, len(mal_ids), 50)]
     anilist_map = {}
     
@@ -128,7 +127,6 @@ def parse_steps_from_html_slice(html_slice, anilist_map):
 
         step_title = a_tag.get_text(strip=True)
         
-        # Check for optional status in the link's parent context
         parent_text = a_tag.find_parent().get_text() if a_tag.find_parent() else ""
         is_optional = '(optional)' in parent_text.lower()
 
@@ -155,8 +153,8 @@ def parse_all_watch_orders(html_content):
     all_h3_tags = watch_orders_h2.find_next_siblings('h3')
 
     for h3 in all_h3_tags:
-        # Improved title parsing
         raw_title = h3.get_text(strip=True)
+        # Handle cases like '.hack//Sign' without splitting incorrectly
         clean_title = raw_title.replace('//', '##SLASH##')
         parts = [p.strip().replace('##SLASH##', '//') for p in clean_title.split('/')]
         title = parts[0]
@@ -169,8 +167,8 @@ def parse_all_watch_orders(html_content):
         
         watch_orders_list = []
         
-        sub_headings = entry_soup.find_all(['h4', lambda tag: tag.name == 'p' and tag.strong and len(tag.get_text(strip=True)) == len(tag.strong.get_text(strip=True)) and len(tag.get_text(strip=True)) < 100])
-        
+        sub_headings = entry_soup.find_all(['h4', lambda tag: tag.name == 'p' and tag.strong and len(tag.get_text(strip=True)) == len(tag.strong.get_text(strip=True)) and len(tag.get_text(strip=True)) < 100 and 'note' not in tag.get_text(strip=True).lower()])
+
         if sub_headings:
             print(f"  - Complex entry found with {len(sub_headings)} sub-sections.")
             for i, sub_head in enumerate(sub_headings):
@@ -199,12 +197,12 @@ def parse_all_watch_orders(html_content):
             if steps:
                 watch_orders_list.append({"name": "Main Story", "description": None, "steps": steps})
 
-        entry_notes = None
-        note_tag = entry_soup.find(['strong', 'b'], string=re.compile(r'Note:?', re.IGNORECASE))
-        if note_tag:
+        entry_notes_list = []
+        for note_tag in entry_soup.find_all(['strong', 'b'], string=re.compile(r'Note:?', re.IGNORECASE)):
              note_parent = note_tag.find_parent()
              if note_parent:
-                  entry_notes = note_parent.get_text(strip=True)
+                  entry_notes_list.append(note_parent.get_text(strip=True))
+        entry_notes = "\n".join(entry_notes_list) if entry_notes_list else None
 
         if watch_orders_list:
             api_entries.append({
@@ -216,7 +214,6 @@ def parse_all_watch_orders(html_content):
 
     return api_entries
 
-# --- Main Execution ---
 def main():
     if len(sys.argv) < 2:
         print("Usage: python scrape_wiki.py <output_directory>")
@@ -240,7 +237,7 @@ def main():
         
         final_output = {
             "metadata": {
-                "version": "2.4",
+                "version": "2.5",
                 "last_updated_utc": datetime.now(timezone.utc).isoformat(),
                 "source_url": "https://www.reddit.com/r/anime/wiki/watch_order"
             },
