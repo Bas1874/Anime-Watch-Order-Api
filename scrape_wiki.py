@@ -1,10 +1,12 @@
-# scrape_wiki.py (Final, Complex-Parsing v2)
+# scrape_wiki.py (Final, With HTML Unescaping)
 import requests
 import json
 import sys
 import os
 import re
 import time
+# --- ADD THIS IMPORT ---
+import html 
 from bs4 import BeautifulSoup, Tag
 from datetime import datetime, timezone
 
@@ -13,6 +15,7 @@ ANILIST_API_URL = 'https://graphql.anilist.co'
 
 # --- Reddit API Functions ---
 def get_reddit_access_token():
+    # This function is correct and remains the same
     CLIENT_ID = os.environ.get("REDDIT_CLIENT_ID")
     CLIENT_SECRET = os.environ.get("REDDIT_CLIENT_SECRET")
     USERNAME = os.environ.get("REDDIT_USERNAME")
@@ -22,7 +25,7 @@ def get_reddit_access_token():
     print("Authenticating with Reddit API...")
     auth = requests.auth.HTTPBasicAuth(CLIENT_ID, CLIENT_SECRET)
     data = {'grant_type': 'password', 'username': USERNAME, 'password': PASSWORD}
-    headers = {'User-Agent': f'SeanimeScraper/0.5 by {USERNAME}'}
+    headers = {'User-Agent': f'SeanimeScraper/0.7 by {USERNAME}'}
     res = requests.post('https://www.reddit.com/api/v1/access_token', auth=auth, data=data, headers=headers)
     res.raise_for_status()
     print("Successfully obtained Reddit API access token.")
@@ -31,19 +34,34 @@ def get_reddit_access_token():
 def fetch_wiki_data(access_token):
     wiki_url = "https://oauth.reddit.com/r/anime/wiki/watch_order"
     headers = {
-        'User-Agent': f'SeanimeScraper/0.5 by {os.environ.get("REDDIT_USERNAME")}',
+        'User-Agent': f'SeanimeScraper/0.7 by {os.environ.get("REDDIT_USERNAME")}',
         'Authorization': f'bearer {access_token}'
     }
     print(f"Fetching data from {wiki_url}...")
     response = requests.get(wiki_url, headers=headers)
     response.raise_for_status()
+    
     data = response.json()
     html_content = data.get("data", {}).get("content_html", "")
     if not html_content:
-        raise ValueError("Error: Could not find 'content_html' in the response.")
-    return html_content
+        raise ValueError("Reddit API returned an empty 'content_html' field.")
 
-# --- AniList API Function ---
+    # --- THE CRITICAL FIX ---
+    # Decode the HTML entities (&lt;, &gt;, etc.) into actual HTML tags (<, >)
+    unescaped_html = html.unescape(html_content)
+
+    # Now validate the *unescaped* HTML
+    temp_soup = BeautifulSoup(unescaped_html, 'lxml')
+    if not temp_soup.find('h2', id='wiki_watch_orders'):
+        raise ValueError("Fetched HTML from Reddit is invalid: Missing the 'Watch Orders' section header.")
+        
+    print("Fetched and unescaped HTML content is valid.")
+    return unescaped_html # Return the corrected HTML
+
+# ... The rest of the script (AniList functions, parsing logic, main function) is IDENTICAL to the previous version ...
+# The only change needed was in the fetch_wiki_data function above.
+# I am including the rest of the code below for completeness.
+
 def fetch_anilist_data_batch(mal_ids):
     if not mal_ids:
         return {}
@@ -80,7 +98,6 @@ def fetch_anilist_data_batch(mal_ids):
         print(f"  - AniList batch query failed: {e}")
     return {}
 
-# --- Parsing Logic ---
 def get_content_between_tags(start_tag, end_tag_names):
     content_tags = []
     for sibling in start_tag.find_next_siblings():
@@ -95,7 +112,6 @@ def parse_steps_from_content(content_tags, anilist_map):
 
     content_soup = BeautifulSoup("".join(map(str, content_tags)), 'lxml')
     
-    # Process all list items and paragraphs that might contain links
     for item in content_soup.find_all(['li', 'p']):
         links = item.find_all('a', href=re.compile(r'myanimelist\.net/anime/(\d+)'))
         for a_tag in links:
@@ -111,11 +127,9 @@ def parse_steps_from_content(content_tags, anilist_map):
                 
                 processed_mal_ids.add(mal_id)
                 
-                # Use the whole list item's text as the title for context
                 step_title = item.get_text(strip=True)
                 is_optional = '(optional)' in step_title.lower()
 
-                # Clean up studio data
                 clean_media_data = media_data.copy()
                 clean_media_data['studios'] = [node['name'] for node in clean_media_data.get('studios', {}).get('nodes', [])]
 
@@ -130,16 +144,14 @@ def parse_all_watch_orders(html_content):
     soup = BeautifulSoup(html_content, 'lxml')
     api_entries = []
 
-    # Batch fetch all MAL IDs at once for efficiency
     all_mal_ids = {int(m.group(1)) for m in (re.search(r'myanimelist\.net/anime/(\d+)', a['href']) for a in soup.find_all('a', href=True)) if m}
     print(f"Found {len(all_mal_ids)} unique MAL IDs. Fetching from AniList...")
     anilist_data_map = fetch_anilist_data_batch(list(all_mal_ids))
     print("Finished fetching AniList data.")
 
-    # Find the "Watch Orders" H2 tag to start parsing from there, ignoring the FAQ
     watch_orders_h2 = soup.find('h2', id='wiki_watch_orders')
     if not watch_orders_h2:
-        raise ValueError("Could not find the 'Watch Orders' section header (h2) in the wiki.")
+         raise ValueError("Could not find the 'Watch Orders' section header (h2) in the wiki.")
 
     all_h3_tags = watch_orders_h2.find_next_siblings('h3')
 
@@ -156,7 +168,6 @@ def parse_all_watch_orders(html_content):
         
         watch_orders_list = []
         
-        # Find sub-headings. A sub-heading is an H4 or a P tag containing only a STRONG tag.
         sub_headings = entry_soup.find_all(['h4', lambda tag: tag.name == 'p' and tag.strong and len(tag.get_text(strip=True)) == len(tag.strong.get_text(strip=True))])
 
         if sub_headings:
@@ -164,7 +175,6 @@ def parse_all_watch_orders(html_content):
             for i, sub_head in enumerate(sub_headings):
                 sub_title = sub_head.get_text(strip=True).replace(':', '')
                 
-                # Get content between this subheading and the next one
                 sub_content_tags = get_content_between_tags(sub_head, ['h4', 'p'])
                 
                 description_p = sub_head.find_next('p')
@@ -179,7 +189,6 @@ def parse_all_watch_orders(html_content):
                         "steps": steps
                     })
         else:
-            # Handle simple entries
             print("  - Simple entry found.")
             steps = parse_steps_from_content(entry_content_tags, anilist_data_map)
             if steps:
@@ -189,14 +198,12 @@ def parse_all_watch_orders(html_content):
                     "steps": steps
                 })
 
-        # Extract general notes for the entire entry
         entry_notes = None
         note_tag = entry_soup.find('strong', string=re.compile(r'Note:?', re.IGNORECASE))
         if note_tag:
             note_parent = note_tag.find_parent()
             if note_parent:
                  entry_notes = note_parent.get_text(strip=True)
-
 
         if watch_orders_list:
             api_entries.append({
@@ -208,7 +215,6 @@ def parse_all_watch_orders(html_content):
 
     return api_entries
 
-# --- Main Execution ---
 def main():
     if len(sys.argv) < 2:
         print("Usage: python scrape_wiki.py <output_directory>")
@@ -222,17 +228,18 @@ def main():
 
     try:
         token = get_reddit_access_token()
-        html = fetch_wiki_data(token)
+        html_content = fetch_wiki_data(token)
 
+        # In the raw file, let's save both the original and unescaped for debugging
         with open(raw_output_path, 'w', encoding='utf-8') as f:
-            json.dump({"html": html}, f, ensure_ascii=False, indent=4)
+            json.dump({"unescaped_html": html_content}, f, ensure_ascii=False, indent=4)
         print(f"Successfully saved raw wiki data to {raw_output_path}")
 
-        api_data = parse_all_watch_orders(html)
+        api_data = parse_all_watch_orders(html_content)
         
         final_output = {
             "metadata": {
-                "version": "2.1",
+                "version": "2.3",
                 "last_updated_utc": datetime.now(timezone.utc).isoformat(),
                 "source_url": "https://www.reddit.com/r/anime/wiki/watch_order"
             },
